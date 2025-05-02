@@ -63,6 +63,14 @@
     <p class="text-center">Simulating diverse human driving styles in mixed traffic environments with real-time LLM reasoning.</p>
   </section>
 
+  <div class="row">
+      <div class="col text-center">
+          <video hight="100%" width="100%" playsinline controls autoplay loop="loop" preload muted>
+              <source src="videos/aggressive_sim_with_llm.mp4" type="video/mp4">
+          </video>
+      </div>
+  </div>
+                
   <!-- Driving Styles -->
   <section id="styles">
     <h2 class="section-title">Driving Style Demonstrations</h2>
