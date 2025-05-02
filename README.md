@@ -81,7 +81,7 @@
           <div class="col-md-6 text-center">
             <div class="ratio ratio-16x9">
               <!-- ✅ 替换为你的实际 YouTube 或 Google Drive 链接 -->
-              <iframe src="https://youtu.be/1LDZOSWXAS8"
+              <iframe src="https://www.youtube.com/embed/1LDZOSWXAS8"
                 title="Aggressive Driving Simulation" allowfullscreen></iframe>
             </div>
           </div>
