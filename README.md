@@ -75,7 +75,7 @@
             <source src="videos/aggressive_sim_with_llm.mp4" type="video/mp4">
           </video>
           <video controls loop muted class="w-100">
-            <source src="path/to/aggressive_bev_after.mp4" type="video/mp4">
+            <source src="videos/output_10frames.mp4" type="video/mp4">
           </video>
         </div>
       </div>
