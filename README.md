@@ -62,18 +62,17 @@
     <h1 class="section-title">X-DriverSim: LLM-Powered Interactive Simulation for Diverse Drivers</h1>
     <p class="text-center">Simulating diverse human driving styles in mixed traffic environments with real-time LLM reasoning.</p>
   </section>
-
-  <div class="row">
+                
+  <!-- Driving Styles -->
+  <section id="styles">
+    <h2 class="section-title">Driving Style Demonstrations</h2>
+    <div class="row">
       <div class="col text-center">
           <video hight="100%" width="100%" playsinline controls autoplay loop="loop" preload muted>
               <source src="videos/aggressive_sim_with_llm.mp4" type="video/mp4">
           </video>
       </div>
-  </div>
-                
-  <!-- Driving Styles -->
-  <section id="styles">
-    <h2 class="section-title">Driving Style Demonstrations</h2>
+   </div>
     <div class="row">
       <div class="col-md-12 highlight">
         <h5>Aggressive Style</h5>
