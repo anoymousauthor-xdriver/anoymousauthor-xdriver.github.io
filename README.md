@@ -69,14 +69,22 @@
     <div class="row">
       <div class="col-md-12 highlight">
         <h5>Aggressive Style</h5>
-        <div class="image-grid">
-          <img src="path/to/aggressive_style.png" class="img-fluid" alt="Aggressive Driving Style">
-          <video controls loop muted class="w-100">
-            <source src="videos/aggressive_sim_with_llm.mp4" type="video/mp4">
-          </video>
-          <video controls loop muted class="w-100">
-            <source src="videos/output_10frames.mp4" type="video/mp4">
-          </video>
+        <div class="row">
+          <div class="col-md-6 text-center">
+            <img src="images/preview_aggressive.jpg" class="img-fluid rounded shadow" alt="Aggressive Driving Preview">
+            <p class="mt-2">
+              <a href="https://github.com/yourusername/X-DriverSim/releases/download/v1.0/aggressive_sim_with_llm.mp4" target="_blank">
+                📥 Download Full Video
+              </a>
+            </p>
+          </div>
+          <div class="col-md-6 text-center">
+            <div class="ratio ratio-16x9">
+              <!-- ✅ 替换为你的实际 YouTube 或 Google Drive 链接 -->
+              <iframe src="https://youtu.be/1LDZOSWXAS8"
+                title="Aggressive Driving Simulation" allowfullscreen></iframe>
+            </div>
+          </div>
         </div>
       </div>
       <!-- Add more styles (Cautious, Distracted, AV) similarly -->
