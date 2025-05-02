@@ -71,8 +71,8 @@
         <h5>Aggressive Style</h5>
         <div class="image-grid">
           <img src="path/to/aggressive_style.png" class="img-fluid" alt="Aggressive Driving Style">
-          <video controls loop muted class="w-100">
-            <source src="path/to/aggressive_bev_before.mp4" type="video/mp4">
+          <video controls autoplay loop muted class="w-100">
+            <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/aggressive_sim_with_llm.mp4" type="video/mp4">
           </video>
           <video controls loop muted class="w-100">
             <source src="path/to/aggressive_bev_after.mp4" type="video/mp4">
