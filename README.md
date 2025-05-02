@@ -67,16 +67,14 @@
   <section id="styles">
     <h2 class="section-title">Driving Style Demonstrations</h2>
     <div class="row">
-      <div class="col text-center">
-          <video hight="100%" width="100%" playsinline controls autoplay loop="loop" preload muted>
-              <source src="videos/aggressive_sim_with_llm.mp4" type="video/mp4">
-          </video>
-      </div>
-   </div>
-    <div class="row">
       <div class="col-md-12 highlight">
         <h5>Aggressive Style</h5>
         <div class="row">
+          <div class="col-md-6 text-center">
+              <video hight="100%" width="100%" playsinline controls autoplay loop="loop" preload muted>
+                  <source src="videos/aggressive_sim_with_llm.mp4" type="video/mp4">
+              </video>
+          </div>
           <div class="col-md-6 text-center">
             <img src="images/preview_aggressive.jpg" class="img-fluid rounded shadow" alt="Aggressive Driving Preview">
             <p class="mt-2">
