@@ -71,7 +71,7 @@
         <h5>Aggressive Style</h5>
         <div class="image-grid">
           <img src="path/to/aggressive_style.png" class="img-fluid" alt="Aggressive Driving Style">
-          <video controls autoplay loop muted class="w-100">
+          <video controls loop muted class="w-100">
             <source src="videos/aggressive_sim_with_llm.mp4" type="video/mp4">
           </video>
           <video controls loop muted class="w-100">
