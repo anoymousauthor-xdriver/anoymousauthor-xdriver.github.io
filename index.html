@@ -91,17 +91,40 @@
       cursor: pointer;
     }
 
+    /* For all video-border elements */
     .video-border {
       display: inline-block;
       padding: 2px;
       border-radius: 4px;
       background: linear-gradient(45deg, #ff9a9e, #fad0c4);
     }
-
+    
+    /* For all video-border videos */
     .video-border video {
       display: block;
       border: none;
       border-radius: 4px;
+    }
+    
+    /* Specific style for Tellphone Style */
+    .video-border.tellphone-style {
+      display: flex;
+      justify-content: space-between; /* Ensure videos are spaced out */
+      gap: 1rem; /* Adds a space between videos */
+      align-items: center; /* Center the videos vertically if needed */
+    }
+    
+    /* For the video elements */
+    .video-style {
+      width: 48%; /* Ensure videos take 48% of the container width */
+      border-radius: 4px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow */
+    }
+    
+    /* Optional hover effect to slightly zoom on hover */
+    .video-style:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease-in-out;
     }
 
     .highlight {
@@ -115,51 +138,66 @@
     .highlight:hover {
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
     }
-  
-    .image-container img {
-      max-width: 5%; /* 设置图片最大宽度为容器宽度的80% */
-      height: auto;   /* 高度自动调整，保持宽高比 */
-      border-radius: 8px;
-      transition: transform 0.3s ease;
-    }
-  
-    .image-container img:hover {
-      transform: scale(1.05); /* Image zoom effect */
-    }
-  
-    .card {
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-  
-    .card-body {
-      padding: 1.25rem;
-    }
-  
-    .card-title {
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
-      color: #333;
-    }
 
+    /* Wrapper for the sliding cases */
     .accident-scroll-wrapper {
       display: flex;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      gap: 1.5rem;
-      padding: 1rem 0;
-      scroll-snap-type: x mandatory;
+      overflow-x: scroll;
+      gap: 1rem; /* Space between cards */
+      padding-bottom: 1rem;
+      scroll-behavior: smooth;
       -webkit-overflow-scrolling: touch;
     }
     
+    /* Card container */
     .accident-card {
-      flex: 0 0 300px; /* 固定卡片宽度，保持一行展示 */
-      scroll-snap-align: start;
+      flex: 0 0 auto; /* Prevent cards from shrinking */
+      width: 80%; /* Card width */
+      transition: transform 0.3s ease; 
+      cursor: pointer;
       background-color: #fff;
+      border-radius: 12px; /* Rounded corners */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
       margin-bottom: 0.5rem;
     }
     
+    /* Image styling */
+    .accident-img {
+      width: 100%; /* Make sure image takes up the full card width */
+      height: auto;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    
+    /* Mouse hover effect for the card */
+    .accident-card:hover {
+      transform: scale(1.05); /* Slightly enlarge the card */
+    }
+    
+    /* Mouse hover effect for the image */
+    .accident-img:hover {
+      transform: scale(1.1); /* Slightly enlarge the image on hover */
+    }
+    
+    /* Container's hover effect when any card is hovered */
+    .accident-scroll-wrapper:hover {
+      cursor: grab; /* Change cursor to grab when hovering over the scrollable area */
+    }
+    
+    /* Styling for images inside the .image-container */
+    .image-container img {
+      max-width: 100%; /* Make image fully responsive */
+      height: auto;   /* Maintain aspect ratio */
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    
+    /* Image zoom effect */
+    .image-container img:hover {
+      transform: scale(1.05); /* Image zoom effect */
+    }
+    
+    /* Scrollbar custom styles */
     .accident-scroll-wrapper::-webkit-scrollbar {
       height: 6px;
     }
@@ -168,6 +206,7 @@
       background-color: #aaa;
       border-radius: 4px;
     }
+
 
     .api-image-container {
       position: relative;
@@ -302,16 +341,19 @@
         </div>
       </div>
 
-      <!-- Tellphone Style -->
+     <!-- Tellphone Style -->
     <div class="col-12 col-lg-6">
       <div class="card shadow-sm border-light rounded">
         <div class="card-body">
           <h5 class="card-title text-center">Tellphone Style</h5>
-          <div class="video-border">
-            <video controls loop muted class="w-100 mb-3">
+          <div class="video-border tellphone-style d-flex justify-content-between">
+            <!-- Video 1 -->
+            <video controls loop muted class="video-style mb-3">
               <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/tellhone_1_hstack_output.mp4" type="video/mp4">
             </video>
-            <video controls loop muted class="w-100 mb-3">
+    
+            <!-- Video 2 -->
+            <video controls loop muted class="video-style mb-3">
               <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/tellhone_2_hstack_output.mp4" type="video/mp4">
             </video>
           </div>
@@ -319,6 +361,7 @@
         </div>
       </div>
     </div>
+
 
       <!-- Drunk Style -->
       <div class="col">
@@ -339,15 +382,15 @@
     <!-- 复制上方样式修改标题与资源链接以添加其他风格 -->
   </section>
 
-  <!-- Accident Cases -->
-  <section id="accidents" data-aos="fade-up">
+ <!-- Accident Cases -->
+<section id="accidents" data-aos="fade-up">
   <h2 class="section-title">Accident Case Studies</h2>
   <div class="accident-scroll-wrapper">
     <!-- Case 1 -->
     <div class="accident-card card shadow-sm border-light rounded">
       <div class="card-body">
         <h5 class="card-title">Case 1: Aggressive Driving-Induced Collision</h5>
-        <img src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/CaseStudy_agg.png" alt="Aggressive Driving-Induced Collision" class="img-fluid mb-3">
+        <img src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/CaseStudy_agg.png" alt="Aggressive Driving-Induced Collision" class="img-fluid mb-3 accident-img">
         <p><strong>Description:</strong> Vehicle suddenly changed lanes causing a collision.<br>
           <strong>Prompt:</strong> "Change lanes aggressively ignoring traffic."</p>
       </div>
@@ -357,7 +400,7 @@
     <div class="accident-card card shadow-sm border-light rounded">
       <div class="card-body">
         <h5 class="card-title">Case 2: Fatigue-Induced Rear-End Collision</h5>
-        <img src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/CaseStudy_fai.png" alt="Fatigue-Induced Rear-End Collision" class="img-fluid mb-3">
+        <img src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/CaseStudy_fai.png" alt="Fatigue-Induced Rear-End Collision" class="img-fluid mb-3 accident-img">
         <p><strong>Description:</strong> Driver failed to brake in time.<br>
           <strong>Prompt:</strong> "Drive while tired and unresponsive."</p>
       </div>
@@ -367,13 +410,14 @@
     <div class="accident-card card shadow-sm border-light rounded">
       <div class="card-body">
         <h5 class="card-title">Case 3: Distracted Driving-Induced Side Collision</h5>
-        <img src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/CaseStudy_dis.png" alt="Distracted Driving-Induced Side Collision" class="img-fluid mb-3">
+        <img src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/CaseStudy_dis.png" alt="Distracted Driving-Induced Side Collision" class="img-fluid mb-3 accident-img">
         <p><strong>Description:</strong> Driver veered into another lane.<br>
           <strong>Prompt:</strong> "Check phone while driving."</p>
       </div>
     </div>
   </div>
 </section>
+
 
 
 
