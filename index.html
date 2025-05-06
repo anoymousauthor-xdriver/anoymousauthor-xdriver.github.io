@@ -104,7 +104,49 @@
       border-radius: 4px;
     }
 
+    .highlight {
+      background-color: #f9fafb;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease;
+    }
+  
+    .highlight:hover {
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+  
+    .image-container img {
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+  
+    .image-container img:hover {
+      transform: scale(1.05); /* Image zoom effect */
+    }
+  
+    .card {
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+  
+    .card-body {
+      padding: 1.25rem;
+    }
+  
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
   </style>
+
+  <script>
+    AOS.init();
+  </script>
+  
 </head>
 <body>
 
@@ -219,26 +261,45 @@
   </section>
 
   <!-- Accident Cases -->
-  <section id="accidents">
-    <h2 class="section-title">Accident Case Studies</h2>
-    <div class="highlight" data-aos="fade-up">
-      <h5>Case 1: Aggressive Driving-Induced Collision</h5>
-      <img src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/CaseStudy_agg.png" alt="Aggressive Driving-Induced Collision" class="w-100">
-      <p><strong>Description:</strong> Vehicle suddenly changed lanes causing a collision.<br>
-         <strong>Prompt:</strong> "Change lanes aggressively ignoring traffic."</p>
-      
-      <h5>Case 2: Fatigue-Induced Rear-End Collision</h5>
-      <img src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/CaseStudy_fai.png" alt="Aggressive Driving-Induced Collision" class="w-100">
-      <p><strong>Description:</strong> Vehicle suddenly changed lanes causing a collision.<br>
-         <strong>Prompt:</strong> "Change lanes aggressively ignoring traffic."</p>
-      
-      <h5>Case 3: Distracted Driving-Induced Side Collision</h5>
-      <img src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/CaseStudy_dis.png" alt="Aggressive Driving-Induced Collision" class="w-100">
-      <p><strong>Description:</strong> Vehicle suddenly changed lanes causing a collision.<br>
-         <strong>Prompt:</strong> "Change lanes aggressively ignoring traffic."</p>
-      
+<section id="accidents" data-aos="fade-up">
+  <h2 class="section-title">Accident Case Studies</h2>
+  <div class="highlight">
+    <div class="card shadow-sm border-light rounded mb-4">
+      <div class="card-body">
+        <h5 class="card-title">Case 1: Aggressive Driving-Induced Collision</h5>
+        <div class="image-container">
+          <img src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/CaseStudy_agg.png" alt="Aggressive Driving-Induced Collision" class="w-100 img-fluid mb-3">
+        </div>
+        <p><strong>Description:</strong> Vehicle suddenly changed lanes causing a collision.<br>
+           <strong>Prompt:</strong> "Change lanes aggressively ignoring traffic."</p>
+      </div>
     </div>
-  </section>
+
+    <div class="card shadow-sm border-light rounded mb-4">
+      <div class="card-body">
+        <h5 class="card-title">Case 2: Fatigue-Induced Rear-End Collision</h5>
+        <div class="image-container">
+          <img src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/CaseStudy_fai.png" alt="Fatigue-Induced Rear-End Collision" class="w-100 img-fluid mb-3">
+        </div>
+        <p><strong>Description:</strong> Vehicle suddenly changed lanes causing a collision.<br>
+           <strong>Prompt:</strong> "Change lanes aggressively ignoring traffic."</p>
+      </div>
+    </div>
+
+    <div class="card shadow-sm border-light rounded mb-4">
+      <div class="card-body">
+        <h5 class="card-title">Case 3: Distracted Driving-Induced Side Collision</h5>
+        <div class="image-container">
+          <img src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/CaseStudy_dis.png" alt="Distracted Driving-Induced Side Collision" class="w-100 img-fluid mb-3">
+        </div>
+        <p><strong>Description:</strong> Vehicle suddenly changed lanes causing a collision.<br>
+           <strong>Prompt:</strong> "Change lanes aggressively ignoring traffic."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 
   <!-- API Effects -->
