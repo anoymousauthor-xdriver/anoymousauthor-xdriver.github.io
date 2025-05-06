@@ -172,7 +172,7 @@
     .api-image-container {
       position: relative;
       width: 100%;
-      padding-top: 100%; /* for 1:1 aspect ratio */
+      padding-top: 100%; /* Maintain 1:1 aspect ratio */
       cursor: pointer;
       perspective: 1000px;
     }
@@ -194,8 +194,13 @@
     
     .img-back {
       z-index: 1;
-      opacity: 0;
+      opacity: 0.7; /* Slightly transparent for the back image */
     }
+    
+    .api-image-container:hover .img-back {
+      opacity: 1; /* Make the back image fully visible on hover */
+    }
+
 
 
 
@@ -298,22 +303,22 @@
       </div>
 
       <!-- Tellphone Style -->
-      <div class="col">
-        <div class="card shadow-sm border-light rounded">
-          <div class="card-body">
-            <h5 class="card-title text-center">Tellphone Style</h5>
-            <div class="video-border">
-              <video controls loop muted class="w-100 mb-3">
-                <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/tellhone_1_hstack_output.mp4" type="video/mp4">
-              </video>
-              <video controls loop muted class="w-100 mb-3">
-                <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/tellhone_2_hstack_output.mp4" type="video/mp4">
-              </video>
-            </div>
-            <p class="text-center">Driver distracted by phone while driving.</p>
+    <div class="col-12 col-lg-6">
+      <div class="card shadow-sm border-light rounded">
+        <div class="card-body">
+          <h5 class="card-title text-center">Tellphone Style</h5>
+          <div class="video-border">
+            <video controls loop muted class="w-100 mb-3">
+              <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/tellhone_1_hstack_output.mp4" type="video/mp4">
+            </video>
+            <video controls loop muted class="w-100 mb-3">
+              <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/tellhone_2_hstack_output.mp4" type="video/mp4">
+            </video>
           </div>
+          <p class="text-center">Driver distracted by phone while driving.</p>
         </div>
       </div>
+    </div>
 
       <!-- Drunk Style -->
       <div class="col">
@@ -382,19 +387,21 @@
   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
     <div class="col">
-  <div class="card api-card shadow-sm rounded border-light">
-    <div class="card-body text-center">
-      <h5 class="card-title">Add Other Vehicle</h5>
+      <div class="card api-card shadow-sm rounded border-light">
+        <div class="card-body text-center">
+          <h5 class="card-title">Add Other Vehicle</h5>
 
-      <div class="api-image-container" onclick="toggleApiImage(this)">
-        <img class="api-img img-front" src="images/aa_tool_experiments/add_other_vehicle/origin_bev.png" alt="Origin BEV">
-        <img class="api-img img-back" src="images/aa_tool_experiments/add_other_vehicle/impact_bev.png" alt="Impact BEV">
+          <div class="api-image-container" onclick="toggleApiImage(this)">
+            <!-- Layer 1: Origin BEV -->
+            <img class="api-img img-front" src="images/aa_tool_experiments/add_other_vehicle/origin_bev.png" alt="Origin BEV">
+            <!-- Layer 2: Impact BEV with slight opacity for partial visibility -->
+            <img class="api-img img-back" src="images/aa_tool_experiments/add_other_vehicle/impact_bev.png" alt="Impact BEV">
+          </div>
+
+          <p class="api-caption mt-2">This is the <strong>origin</strong> behavior with no added vehicle.</p>
+        </div>
       </div>
-
-      <p class="api-caption mt-2">This is the <strong>origin</strong> behavior with no added vehicle.</p>
     </div>
-  </div>
-</div>
 
 
     <!-- add_other_vehicle -->
