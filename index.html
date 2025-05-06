@@ -43,6 +43,19 @@
       border-radius: 12px;
       box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
     }
+    
+    /* Hover Effect on Card */
+    .card:hover {
+      transform: translateY(-5px); /* Slightly lifts the card */
+      transition: transform 0.3s ease-in-out;
+    }
+    
+    /* Shadow and border on hover */
+    .card:hover .card-img-top {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border: 2px solid #007bff;
+    }
+
   </style>
 </head>
 <body>
@@ -70,65 +83,82 @@
   </section>
 
   <!-- Driving Styles -->
-  <section id="styles">
-    <h2 class="section-title">Driving Style Demonstrations</h2>
-    
-    <!-- Sample Driving Style Block -->
-    <div class="highlight" data-aos="fade-up">
-      <h5>Aggressive Style</h5>
-      <div class="row align-items-center">
-        <div class="col-md-7">
-          <video controls loop muted class="w-100">
+  <!-- Sample Driving Style Block -->
+<section id="styles" class="my-5">
+  <h2 class="section-title text-center">Driving Style Demonstrations</h2>
+  
+  <!-- Grid layout to display videos in a compact and aligned way -->
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    <!-- Aggressive Style -->
+    <div class="col">
+      <div class="card shadow-sm border-light rounded">
+        <div class="card-body">
+          <h5 class="card-title text-center">Aggressive Style</h5>
+          <video controls loop muted class="w-100 mb-3">
             <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/aggressive_hstack_output.mp4" type="video/mp4">
           </video>
+          <p class="text-center">Aggressive driver speeds through traffic and swerves through lanes.</p>
         </div>
       </div>
     </div>
-    
-    <div class="highlight" data-aos="fade-up">
-      <h5>Aggressive Style</h5>
-      <div class="row align-items-center">
-        <div class="col-md-7">
-          <video controls loop muted class="w-100">
+
+    <!-- Cautious Style -->
+    <div class="col">
+      <div class="card shadow-sm border-light rounded">
+        <div class="card-body">
+          <h5 class="card-title text-center">Cautious Style</h5>
+          <video controls loop muted class="w-100 mb-3">
             <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/cautious_hstack_output.mp4" type="video/mp4">
           </video>
+          <p class="text-center">Very cautious driver, maintaining a safe distance at all times.</p>
         </div>
       </div>
     </div>
-    
-    <div class="highlight" data-aos="fade-up">
-      <h5>Aggressive Style</h5>
-      <div class="row align-items-center">
-        <div class="col-md-7">
-          <video controls loop muted class="w-100">
+
+    <!-- Tired Style -->
+    <div class="col">
+      <div class="card shadow-sm border-light rounded">
+        <div class="card-body">
+          <h5 class="card-title text-center">Tired Style</h5>
+          <video controls loop muted class="w-100 mb-3">
             <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/tired_hstack_output.mp4" type="video/mp4">
           </video>
+          <p class="text-center">Driver shows signs of fatigue and reduced attentiveness.</p>
         </div>
       </div>
     </div>
-    
-    <div class="highlight" data-aos="fade-up">
-      <h5>Aggressive Style</h5>
-      <div class="row align-items-center">
-        <div class="col-md-7">
-          <video controls loop muted class="w-100">
-            <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/tellphone_1_hstack_output.mp4" type="video/mp4">
+
+    <!-- Tellphone Style -->
+    <div class="col">
+      <div class="card shadow-sm border-light rounded">
+        <div class="card-body">
+          <h5 class="card-title text-center">Tellphone Style</h5>
+          <video controls loop muted class="w-100 mb-3">
+            <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/tellhone_1_hstack_output.mp4" type="video/mp4">
           </video>
+          <video controls loop muted class="w-100 mb-3">
+            <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/tellhone_2_hstack_output.mp4" type="video/mp4">
+          </video>
+          <p class="text-center">Driver distracted by phone while driving.</p>
         </div>
       </div>
     </div>
     
-    <div class="highlight" data-aos="fade-up">
-      <h5>Aggressive Style</h5>
-      <div class="row align-items-center">
-        <div class="col-md-7">
-          <video controls loop muted class="w-100">
+    <!-- Drunk Style -->
+    <div class="col">
+      <div class="card shadow-sm border-light rounded">
+        <div class="card-body">
+          <h5 class="card-title text-center">Drunk Style</h5>
+          <video controls loop muted class="w-100 mb-3">
             <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/drunk_hstack_output.mp4" type="video/mp4">
           </video>
+          <p class="text-center">Driver shows erratic behavior indicative of intoxication.</p>
         </div>
       </div>
     </div>
-    
+  </div>
+</section>
+
 
     <!-- 复制上方样式修改标题与资源链接以添加其他风格 -->
 
@@ -157,9 +187,49 @@
   </section>
 
 
+  <!-- API Effects -->
+<section id="apis" class="my-5">
+  <h2 class="section-title text-center">NEW API Behavior Modifications</h2>
+  <div class="row justify-content-center">
+    <!-- Add Other Vehicle -->
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm border-light rounded">
+        <img src="images/aa_tool_experiments/add_other_vehicle/origin_bev.png" class="card-img-top" alt="Origin BEV - Add Other Vehicle">
+        <div class="card-body">
+          <h5 class="card-title">Add Other Vehicle</h5>
+          <img src="images/aa_tool_experiments/add_other_vehicle/impact_bev.png" class="img-fluid" alt="Impact BEV - Add Other Vehicle">
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Stop Sign -->
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm border-light rounded">
+        <img src="images/aa_tool_experiments/add_stop_sign/origin_bev.png" class="card-img-top" alt="Origin BEV - Add Stop Sign">
+        <div class="card-body">
+          <h5 class="card-title">Add Stop Sign</h5>
+          <img src="images/aa_tool_experiments/add_stop_sign/impact_bev.png" class="img-fluid" alt="Impact BEV - Add Stop Sign">
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Traffic Light -->
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm border-light rounded">
+        <img src="images/aa_tool_experiments/add_traffic_light/origin_bev.png" class="card-img-top" alt="Origin BEV - Add Traffic Light">
+        <div class="card-body">
+          <h5 class="card-title">Add Traffic Light</h5>
+          <img src="images/aa_tool_experiments/add_traffic_light/impact_bev.png" class="img-fluid" alt="Impact BEV - Add Traffic Light">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
    <!-- API Effects -->
 <section id="apis">
-  <h2 class="section-title">API Behavior Modifications</h2>
+  <h2 class="section-title">Last API Behavior Modifications</h2>
   <div class="row">
 
     <!-- add_other_vehicle -->
