@@ -11,6 +11,7 @@
     body {
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(to bottom, #ffffff, #eef2f3);
+      scroll-behavior: smooth;
     }
     .section-title {
       font-weight: 600;
@@ -25,6 +26,10 @@
       border-radius: 16px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       margin-bottom: 2rem;
+      transition: box-shadow 0.3s ease;
+    }
+    .highlight:hover {
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
     }
     h5 {
       font-weight: 600;
@@ -42,6 +47,7 @@
     .video-container video, .image-grid img {
       border-radius: 12px;
       box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
     }
     
     /* Hover Effect on Card */
@@ -54,6 +60,48 @@
     .card:hover .card-img-top {
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       border: 2px solid #007bff;
+    }
+    
+    /* Video Hover Effect */
+    .card:hover video {
+      transform: scale(1.05);
+    }
+
+    .card-body {
+      padding: 1.25rem;
+    }
+
+    /* Navbar Sticky */
+    .navbar {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Custom Scrollbar Styling */
+    .thumbnail-container {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding: 10px;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* Thumbnail Hover Effect */
+    .thumbnail-container img:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+
+    .video-border {
+      display: inline-block;
+      padding: 2px;
+      border-radius: 4px;
+      background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    }
+
+    .video-border video {
+      display: block;
+      border: none;
+      border-radius: 4px;
     }
 
   </style>
@@ -77,91 +125,97 @@
 
 <div class="container">
   <!-- Intro -->
-  <section id="intro">
+  <section id="intro" data-aos="fade-up">
     <h1 class="section-title">X-DriverSim: LLM-Powered Interactive Simulation for Diverse Drivers</h1>
     <p class="text-center">Simulating diverse human driving styles in mixed traffic environments with real-time LLM reasoning.</p>
   </section>
 
   <!-- Driving Styles -->
-  <!-- Sample Driving Style Block -->
-<section id="styles" class="my-5">
-  <h2 class="section-title text-center">Driving Style Demonstrations</h2>
-  
-  <!-- Grid layout to display videos in a compact and aligned way -->
-  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-    <!-- Aggressive Style -->
-    <div class="col">
-      <div class="card shadow-sm border-light rounded">
-        <div class="card-body">
-          <h5 class="card-title text-center">Aggressive Style</h5>
-          <video controls loop muted class="w-100 mb-3">
-            <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/aggressive_hstack_output.mp4" type="video/mp4">
-          </video>
-          <p class="text-center">Aggressive driver speeds through traffic and swerves through lanes.</p>
+  <section id="styles" class="my-5" data-aos="fade-up">
+    <h2 class="section-title text-center">Driving Style Demonstrations</h2>
+    
+    <!-- Bootstrap Grid layout -->
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <!-- Aggressive Style -->
+      <div class="col">
+        <div class="card shadow-sm border-light rounded">
+          <div class="card-body">
+            <h5 class="card-title text-center">Aggressive Style</h5>
+            <div class="video-border">
+              <video controls loop muted class="w-100 mb-3">
+                <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/aggressive_hstack_output.mp4" type="video/mp4">
+              </video>
+            </div>
+            <p class="text-center">Aggressive driver speeds through traffic and swerves through lanes.</p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Cautious Style -->
-    <div class="col">
-      <div class="card shadow-sm border-light rounded">
-        <div class="card-body">
-          <h5 class="card-title text-center">Cautious Style</h5>
-          <video controls loop muted class="w-100 mb-3">
-            <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/cautious_hstack_output.mp4" type="video/mp4">
-          </video>
-          <p class="text-center">Very cautious driver, maintaining a safe distance at all times.</p>
+      <!-- Cautious Style -->
+      <div class="col">
+        <div class="card shadow-sm border-light rounded">
+          <div class="card-body">
+            <h5 class="card-title text-center">Cautious Style</h5>
+            <div class="video-border">
+              <video controls loop muted class="w-100 mb-3">
+                <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/cautious_hstack_output.mp4" type="video/mp4">
+              </video>
+            </div>
+            <p class="text-center">Very cautious driver, maintaining a safe distance at all times.</p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Tired Style -->
-    <div class="col">
-      <div class="card shadow-sm border-light rounded">
-        <div class="card-body">
-          <h5 class="card-title text-center">Tired Style</h5>
-          <video controls loop muted class="w-100 mb-3">
-            <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/tired_hstack_output.mp4" type="video/mp4">
-          </video>
-          <p class="text-center">Driver shows signs of fatigue and reduced attentiveness.</p>
+      <!-- Tired Style -->
+      <div class="col">
+        <div class="card shadow-sm border-light rounded">
+          <div class="card-body">
+            <h5 class="card-title text-center">Tired Style</h5>
+            <div class="video-border">
+              <video controls loop muted class="w-100 mb-3">
+                <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/tired_hstack_output.mp4" type="video/mp4">
+              </video>
+            </div>
+            <p class="text-center">Driver shows signs of fatigue and reduced attentiveness.</p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Tellphone Style -->
-    <div class="col">
-      <div class="card shadow-sm border-light rounded">
-        <div class="card-body">
-          <h5 class="card-title text-center">Tellphone Style</h5>
-          <video controls loop muted class="w-100 mb-3">
-            <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/tellhone_1_hstack_output.mp4" type="video/mp4">
-          </video>
-          <video controls loop muted class="w-100 mb-3">
-            <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/tellhone_2_hstack_output.mp4" type="video/mp4">
-          </video>
-          <p class="text-center">Driver distracted by phone while driving.</p>
+      <!-- Tellphone Style -->
+      <div class="col">
+        <div class="card shadow-sm border-light rounded">
+          <div class="card-body">
+            <h5 class="card-title text-center">Tellphone Style</h5>
+            <div class="video-border">
+              <video controls loop muted class="w-100 mb-3">
+                <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/tellhone_1_hstack_output.mp4" type="video/mp4">
+              </video>
+              <video controls loop muted class="w-100 mb-3">
+                <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/tellhone_2_hstack_output.mp4" type="video/mp4">
+              </video>
+            </div>
+            <p class="text-center">Driver distracted by phone while driving.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Drunk Style -->
+      <div class="col">
+        <div class="card shadow-sm border-light rounded">
+          <div class="card-body">
+            <h5 class="card-title text-center">Drunk Style</h5>
+            <div class="video-border">
+              <video controls loop muted class="w-100 mb-3">
+                <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/drunk_hstack_output.mp4" type="video/mp4">
+              </video>
+            </div>
+            <p class="text-center">Driver shows erratic behavior indicative of intoxication.</p>
+          </div>
         </div>
       </div>
     </div>
     
-    <!-- Drunk Style -->
-    <div class="col">
-      <div class="card shadow-sm border-light rounded">
-        <div class="card-body">
-          <h5 class="card-title text-center">Drunk Style</h5>
-          <video controls loop muted class="w-100 mb-3">
-            <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/drunk_hstack_output.mp4" type="video/mp4">
-          </video>
-          <p class="text-center">Driver shows erratic behavior indicative of intoxication.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
     <!-- 复制上方样式修改标题与资源链接以添加其他风格 -->
-
   </section>
 
   <!-- Accident Cases -->
