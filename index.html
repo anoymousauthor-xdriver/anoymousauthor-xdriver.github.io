@@ -152,20 +152,26 @@
     /* Card container */
     .accident-card {
       flex: 0 0 auto; /* Prevent cards from shrinking */
-      width: 80%; /* Card width */
+      width: 60%; /* Reduced card width for smaller cards */
+      max-width: 400px; /* Optional: Control the max width of the card */
       transition: transform 0.3s ease; 
       cursor: pointer;
       background-color: #fff;
       border-radius: 12px; /* Rounded corners */
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
       margin-bottom: 0.5rem;
+      display: flex; /* Flexbox to help center content */
+      justify-content: center; /* Center card content */
+      align-items: center; /* Center card content vertically */
     }
     
     /* Image styling */
     .accident-img {
-      width: 50%; /* Make sure image takes up the full card width */
+      width: 80%; /* Make image take up 80% of card width */
       height: auto;
       border-radius: 8px;
+      display: block; /* Make the image a block element */
+      margin: 0 auto; /* Center the image horizontally */
       transition: transform 0.3s ease;
     }
     
@@ -208,19 +214,23 @@
     }
 
 
+
     .api-image-container {
       position: relative;
-      width: 100%;
+      width: 60%; /* 控制容器的宽度，这里设置为 80% */
+      max-width: 400px; /* 设置最大宽度，防止过大 */
+      height: auto; /* 根据宽度自动调整高度 */
       aspect-ratio: 16 / 9;
       cursor: pointer;
     }
+
     
     .api-img {
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
+      width: 70%; /* 控制图片的宽度，这里设置为 90% */
+      height: 70%; /* 控制图片的高度，这里设置为 90% */
       border-radius: 8px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, opacity 0.3s ease;
@@ -255,23 +265,26 @@
 
   <script>
     AOS.init();
-
+  
     function toggleApiImage(container) {
       const front = container.querySelector('.img-front');
       const back = container.querySelector('.img-back');
       const caption = container.closest('.card-body').querySelector('.api-caption');
-    
+      
       if (front.style.opacity === "0") {
-        front.style.opacity = "1";
-        back.style.opacity = "0";
-        caption.innerHTML = 'This is the <strong>origin</strong> behavior with no added vehicle.';
-      } else {
-        front.style.opacity = "0";
-        back.style.opacity = "1";
+        // 图片切换时，减少前景图片透明度，增加背景图片透明度
+        front.style.opacity = "0.7"; // 保持前景图片可见
+        back.style.opacity = "0.5";  // 背景图片变得更透明
         caption.innerHTML = 'This is the <strong>impact</strong> result after API modification.';
+      } else {
+        // 恢复为原状态
+        front.style.opacity = "1";   // 前景图片完全显示
+        back.style.opacity = "0.5";  // 背景图片依旧可见，但透明度提高
+        caption.innerHTML = 'This is the <strong>origin</strong> behavior with no added vehicle.';
       }
     }
   </script>
+
   
 </head>
 <body>
@@ -355,11 +368,14 @@
 
     <!-- Phone Style -->
     <div class="tab-pane fade" id="phone" role="tabpanel" aria-labelledby="phone-tab">
-      <div class="video-section d-flex justify-content-between">
-        <video controls loop muted class="video-style mb-3">
+<!--       <div class="video-section d-flex justify-content-between"> -->
+      <div class="video-section">
+<!--         <video controls loop muted class="video-style mb-3"> -->
+        <video controls loop muted class="w-100 mb-3">
           <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/tellhone_1_hstack_output.mp4" type="video/mp4">
         </video>
-        <video controls loop muted class="video-style mb-3">
+<!--         <video controls loop muted class="video-style mb-3"> -->
+        <video controls loop muted class="w-100 mb-3">
           <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/tellhone_2_hstack_output.mp4" type="video/mp4">
         </video>
       </div>
