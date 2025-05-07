@@ -163,7 +163,7 @@
     
     /* Image styling */
     .accident-img {
-      width: 100%; /* Make sure image takes up the full card width */
+      width: 10%; /* Make sure image takes up the full card width */
       height: auto;
       border-radius: 8px;
       transition: transform 0.3s ease;
@@ -209,22 +209,22 @@
 
 
     .api-image-container {
-      position: relative;
-      width: 100%;
-      height: auto;
-      cursor: pointer;
-    }
-    
-    .api-img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, opacity 0.3s ease;
-    }
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9; /* ✅ 推荐使用现代浏览器 */
+        cursor: pointer;
+      }
+      
+      .api-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
     
     /* Layer 1 (Origin BEV) */
     .img-front {
@@ -437,21 +437,21 @@
   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
     <div class="col">
-  <div class="card api-card shadow-sm rounded border-light">
-    <div class="card-body text-center">
-      <h5 class="card-title">Add Other Vehicle</h5>
-
-      <div class="api-image-container" onclick="toggleApiImage(this)">
-        <!-- Layer 1: Origin BEV -->
-        <img class="api-img img-front" src="images/aa_tool_experiments/add_other_vehicle/origin_bev.png" alt="Origin BEV">
-        <!-- Layer 2: Impact BEV with slight opacity for partial visibility -->
-        <img class="api-img img-back" src="images/aa_tool_experiments/add_other_vehicle/impact_bev.png" alt="Impact BEV">
+      <div class="card api-card shadow-sm rounded border-light">
+        <div class="card-body text-center">
+          <h5 class="card-title">Add Other Vehicle</h5>
+    
+          <div class="api-image-container" onclick="toggleApiImage(this)">
+            <!-- Layer 1: Origin BEV -->
+            <img class="api-img img-front" src="images/aa_tool_experiments/add_other_vehicle/origin_bev.png" alt="Origin BEV">
+            <!-- Layer 2: Impact BEV with slight opacity for partial visibility -->
+            <img class="api-img img-back" src="images/aa_tool_experiments/add_other_vehicle/impact_bev.png" alt="Impact BEV">
+          </div>
+    
+          <p class="api-caption mt-2">This is the <strong>origin</strong> behavior with no added vehicle.</p>
+        </div>
       </div>
-
-      <p class="api-caption mt-2">This is the <strong>origin</strong> behavior with no added vehicle.</p>
     </div>
-  </div>
-</div>
 
 
 
