@@ -152,7 +152,7 @@
     /* Card container */
     .accident-card {
       flex: 0 0 auto; /* Prevent cards from shrinking */
-      width: 80%; /* Reduced card width for smaller cards */
+      width: 90%; /* Reduced card width for smaller cards */
       max-width: 400px; /* Optional: Control the max width of the card */
       transition: transform 0.3s ease; 
       cursor: pointer;
@@ -167,7 +167,7 @@
     
     /* Image styling */
     .accident-img {
-      width: 80%; /* Make image take up 80% of card width */
+      width: 90%; /* Make image take up 80% of card width */
       height: auto;
       border-radius: 8px;
       display: block; /* Make the image a block element */
@@ -283,13 +283,13 @@
     
       if (frontOpacity === "1") {
         // 当前前景图完全可见，切换为透明
-        front.style.opacity = "0.7"; // 前景图片变得透明
-        back.style.opacity = "0.5";  // 背景图片更透明
+        front.style.opacity = "0.5"; // 前景图片变得透明
+        back.style.opacity = "1";  // 背景图片更透明
         caption.innerHTML = 'This is the <strong>impact</strong> result after API modification.';
-      } else if (frontOpacity === "0.7") {
+      } else if (frontOpacity === "0.5") {
         // 当前前景图稍微透明，切换为背景可见
-        front.style.opacity = "0.5"; // 前景图片变得更透明
-        back.style.opacity = "0.7";  // 背景图片恢复
+        front.style.opacity = "1"; // 前景图片变得更透明
+        back.style.opacity = "0.5";  // 背景图片恢复
         caption.innerHTML = 'This is the <strong>origin</strong> behavior with no added vehicle.';
       } else {
         // 如果透明度是 0.5，恢复为完全可见
