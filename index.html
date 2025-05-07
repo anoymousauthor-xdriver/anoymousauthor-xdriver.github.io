@@ -152,7 +152,7 @@
     /* Card container */
     .accident-card {
       flex: 0 0 auto; /* Prevent cards from shrinking */
-      width: 60%; /* Reduced card width for smaller cards */
+      width: 80%; /* Reduced card width for smaller cards */
       max-width: 400px; /* Optional: Control the max width of the card */
       transition: transform 0.3s ease; 
       cursor: pointer;
@@ -260,6 +260,13 @@
     .api-image-container:hover .img-back {
       transform: scale(1.05);
     }
+
+    .api-card {
+      width: 80%; /* Reduced card width for smaller cards */
+      max-width: 350px; /* 控制卡片最大宽度 */
+      margin: 0 auto;    /* 居中卡片 */
+    }
+
     
   </style>
 
@@ -271,18 +278,27 @@
       const back = container.querySelector('.img-back');
       const caption = container.closest('.card-body').querySelector('.api-caption');
       
-      if (front.style.opacity === "0") {
-        // 图片切换时，减少前景图片透明度，增加背景图片透明度
-        front.style.opacity = "0.7"; // 保持前景图片可见
-        back.style.opacity = "0.5";  // 背景图片变得更透明
+      // 使用 getComputedStyle 来获取当前的透明度
+      const frontOpacity = window.getComputedStyle(front).opacity;
+    
+      if (frontOpacity === "1") {
+        // 当前前景图完全可见，切换为透明
+        front.style.opacity = "0.7"; // 前景图片变得透明
+        back.style.opacity = "0.5";  // 背景图片更透明
         caption.innerHTML = 'This is the <strong>impact</strong> result after API modification.';
+      } else if (frontOpacity === "0.7") {
+        // 当前前景图稍微透明，切换为背景可见
+        front.style.opacity = "0.5"; // 前景图片变得更透明
+        back.style.opacity = "0.7";  // 背景图片恢复
+        caption.innerHTML = 'This is the <strong>origin</strong> behavior with no added vehicle.';
       } else {
-        // 恢复为原状态
-        front.style.opacity = "1";   // 前景图片完全显示
-        back.style.opacity = "0.5";  // 背景图片依旧可见，但透明度提高
+        // 如果透明度是 0.5，恢复为完全可见
+        front.style.opacity = "1";   // 恢复前景图为完全可见
+        back.style.opacity = "0.5";  // 背景图片依然保持透明
         caption.innerHTML = 'This is the <strong>origin</strong> behavior with no added vehicle.';
       }
     }
+
   </script>
 
   
