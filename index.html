@@ -163,7 +163,7 @@
     
     /* Image styling */
     .accident-img {
-      width: 10%; /* Make sure image takes up the full card width */
+      width: 50%; /* Make sure image takes up the full card width */
       height: auto;
       border-radius: 8px;
       transition: transform 0.3s ease;
@@ -209,46 +209,48 @@
 
 
     .api-image-container {
-        position: relative;
-        width: 100%;
-        aspect-ratio: 16 / 9; /* ✅ 推荐使用现代浏览器 */
-        cursor: pointer;
-      }
-      
-      .api-img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, opacity 0.3s ease;
-      }
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      cursor: pointer;
+    }
+    
+    .api-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
     
     /* Layer 1 (Origin BEV) */
     .img-front {
       z-index: 2; /* Ensure it is on top */
-      opacity: 1; /* Fully visible */
+      opacity: 1;
+      top: 5px;  /* Slight shift down */
+      left: 5px; /* Slight shift right */
     }
     
     /* Layer 2 (Impact BEV) with slight opacity */
     .img-back {
-      z-index: 1; /* This will be below the first image */
-      opacity: 0.5; /* Make the second image partially visible */
+      z-index: 1;
+      opacity: 0.5;
+      /* Slight shift down and to the right for the second layer */
+      top: -5px;  /* Move up slightly */
+      left: -5px; /* Move left slightly */
     }
     
     .api-image-container:hover .img-front {
-      transform: scale(1.05); /* Slight zoom effect on hover */
+      transform: scale(1.05);
     }
     
     .api-image-container:hover .img-back {
-      transform: scale(1.05); /* Slight zoom effect on hover */
+      transform: scale(1.05);
     }
-
-
-
-
+    
   </style>
 
   <script>
