@@ -294,17 +294,17 @@
         // 当前前景图完全可见，切换为透明
         front.style.opacity = "0.2"; // 前景图片变得透明
         back.style.opacity = "1";  // 背景图片更透明
-        caption.innerHTML = 'This is the <strong>impact</strong> result after API modification.';
+        caption.innerHTML = '<strong>Impact</strong> BEV';
       } else if (frontOpacity === "0.2") {
         // 当前前景图稍微透明，切换为背景可见
         front.style.opacity = "1"; // 前景图片变得更透明
         back.style.opacity = "0.2";  // 背景图片恢复
-        caption.innerHTML = 'This is the <strong>origin</strong> behavior with no added vehicle.';
+        caption.innerHTML = '<strong>Origin</strong> BEV';
       } else {
         // 如果透明度是 0.5，恢复为完全可见
         front.style.opacity = "1";   // 恢复前景图为完全可见
         back.style.opacity = "0.2";  // 背景图片依然保持透明
-        caption.innerHTML = 'This is the <strong>origin</strong> behavior with no added vehicle.';
+        caption.innerHTML = '<strong>Origin</strong> BEV';
       }
     }
 
@@ -644,7 +644,7 @@
             <img class="api-img img-back" src="images/aa_tool_experiments/add_other_vehicle/impact_bev.png" alt="Impact BEV">
           </div>
     
-          <p class="api-caption mt-2">This is the <strong>origin</strong> behavior with no added vehicle.</p>
+          <p class="api-caption mt-2"><strong>Origin</strong> BEV</p>
         </div>
       </div>
     </div>
