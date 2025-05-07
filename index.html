@@ -297,96 +297,88 @@
   </section>
 
   <!-- Driving Styles -->
-  <section id="styles" class="my-5" data-aos="fade-up">
-    <h2 class="section-title text-center">Driving Style Demonstrations</h2>
-    
-    <!-- Bootstrap Grid layout -->
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-      <!-- Aggressive Style -->
-      <div class="col">
-        <div class="card shadow-sm border-light rounded">
-          <div class="card-body">
-            <h5 class="card-title text-center">Aggressive Style</h5>
-            <div class="video-border">
-              <video controls loop muted class="w-100 mb-3">
-                <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/aggressive_hstack_output.mp4" type="video/mp4">
-              </video>
-            </div>
-            <p class="text-center">Aggressive driver speeds through traffic and swerves through lanes.</p>
-          </div>
-        </div>
-      </div>
+<section id="styles" class="my-5" data-aos="fade-up">
+  <h2 class="section-title text-center">Driving Style Demonstrations</h2>
 
-      <!-- Cautious Style -->
-      <div class="col">
-        <div class="card shadow-sm border-light rounded">
-          <div class="card-body">
-            <h5 class="card-title text-center">Cautious Style</h5>
-            <div class="video-border">
-              <video controls loop muted class="w-100 mb-3">
-                <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/cautious_hstack_output.mp4" type="video/mp4">
-              </video>
-            </div>
-            <p class="text-center">Very cautious driver, maintaining a safe distance at all times.</p>
-          </div>
-        </div>
-      </div>
+  <!-- Tabs -->
+  <ul class="nav nav-pills mb-3 justify-content-center" id="styleTabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <a class="nav-link active" id="agg-tab" data-bs-toggle="pill" href="#agg" role="tab" aria-controls="agg" aria-selected="true">Aggressive Style</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="caut-tab" data-bs-toggle="pill" href="#caut" role="tab" aria-controls="caut" aria-selected="false">Cautious Style</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="tired-tab" data-bs-toggle="pill" href="#tired" role="tab" aria-controls="tired" aria-selected="false">Tired Style</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="phone-tab" data-bs-toggle="pill" href="#phone" role="tab" aria-controls="phone" aria-selected="false">Phone Style</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="drunk-tab" data-bs-toggle="pill" href="#drunk" role="tab" aria-controls="drunk" aria-selected="false">Drunk Style</a>
+    </li>
+  </ul>
 
-      <!-- Tired Style -->
-      <div class="col">
-        <div class="card shadow-sm border-light rounded">
-          <div class="card-body">
-            <h5 class="card-title text-center">Tired Style</h5>
-            <div class="video-border">
-              <video controls loop muted class="w-100 mb-3">
-                <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/tired_hstack_output.mp4" type="video/mp4">
-              </video>
-            </div>
-            <p class="text-center">Driver shows signs of fatigue and reduced attentiveness.</p>
-          </div>
-        </div>
-      </div>
-
-     <!-- Tellphone Style -->
-    <div class="col-12 col-lg-6">
-      <div class="card shadow-sm border-light rounded">
-        <div class="card-body">
-          <h5 class="card-title text-center">Tellphone Style</h5>
-          <div class="video-border tellphone-style d-flex justify-content-between">
-            <!-- Video 1 -->
-            <video controls loop muted class="video-style mb-3">
-              <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/tellhone_1_hstack_output.mp4" type="video/mp4">
-            </video>
-    
-            <!-- Video 2 -->
-            <video controls loop muted class="video-style mb-3">
-              <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/tellhone_2_hstack_output.mp4" type="video/mp4">
-            </video>
-          </div>
-          <p class="text-center">Driver distracted by phone while driving.</p>
-        </div>
+  <!-- Tab Content -->
+  <div class="tab-content" id="styleTabsContent">
+    <!-- Aggressive Style -->
+    <div class="tab-pane fade show active" id="agg" role="tabpanel" aria-labelledby="agg-tab">
+      <div class="video-section">
+        <video controls loop muted class="w-100 mb-3">
+          <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/aggressive_hstack_output.mp4" type="video/mp4">
+        </video>
+        <p class="text-center">Aggressive driver speeds through traffic and swerves through lanes.</p>
       </div>
     </div>
 
-
-      <!-- Drunk Style -->
-      <div class="col">
-        <div class="card shadow-sm border-light rounded">
-          <div class="card-body">
-            <h5 class="card-title text-center">Drunk Style</h5>
-            <div class="video-border">
-              <video controls loop muted class="w-100 mb-3">
-                <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/drunk_hstack_output.mp4" type="video/mp4">
-              </video>
-            </div>
-            <p class="text-center">Driver shows erratic behavior indicative of intoxication.</p>
-          </div>
-        </div>
+    <!-- Cautious Style -->
+    <div class="tab-pane fade" id="caut" role="tabpanel" aria-labelledby="caut-tab">
+      <div class="video-section">
+        <video controls loop muted class="w-100 mb-3">
+          <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/cautious_hstack_output.mp4" type="video/mp4">
+        </video>
+        <p class="text-center">Very cautious driver, maintaining a safe distance at all times.</p>
       </div>
     </div>
-    
-    <!-- 复制上方样式修改标题与资源链接以添加其他风格 -->
-  </section>
+
+    <!-- Tired Style -->
+    <div class="tab-pane fade" id="tired" role="tabpanel" aria-labelledby="tired-tab">
+      <div class="video-section">
+        <video controls loop muted class="w-100 mb-3">
+          <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/tired_hstack_output.mp4" type="video/mp4">
+        </video>
+        <p class="text-center">Driver shows signs of fatigue and reduced attentiveness.</p>
+      </div>
+    </div>
+
+    <!-- Phone Style -->
+    <div class="tab-pane fade" id="phone" role="tabpanel" aria-labelledby="phone-tab">
+      <div class="video-section d-flex justify-content-between">
+        <video controls loop muted class="video-style mb-3">
+          <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/tellhone_1_hstack_output.mp4" type="video/mp4">
+        </video>
+        <video controls loop muted class="video-style mb-3">
+          <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/tellhone_2_hstack_output.mp4" type="video/mp4">
+        </video>
+      </div>
+      <p class="text-center">Driver distracted by phone while driving.</p>
+    </div>
+
+    <!-- Drunk Style -->
+    <div class="tab-pane fade" id="drunk" role="tabpanel" aria-labelledby="drunk-tab">
+      <div class="video-section">
+        <video controls loop muted class="w-100 mb-3">
+          <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/drunk_hstack_output.mp4" type="video/mp4">
+        </video>
+        <p class="text-center">Driver shows erratic behavior indicative of intoxication.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+
 
  <!-- Accident Cases -->
 <section id="accidents" data-aos="fade-up">
