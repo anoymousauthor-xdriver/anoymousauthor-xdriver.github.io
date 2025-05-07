@@ -153,7 +153,7 @@
     .accident-card {
       flex: 0 0 auto; /* Prevent cards from shrinking */
       width: 90%; /* Reduced card width for smaller cards */
-      max-width: 400px; /* Optional: Control the max width of the card */
+      max-width: 500px; /* Optional: Control the max width of the card */
       transition: transform 0.3s ease; 
       cursor: pointer;
       background-color: #fff;
@@ -247,7 +247,7 @@
     /* Layer 2 (Impact BEV) with slight opacity */
     .img-back {
       z-index: 1;
-      opacity: 0.5;
+      opacity: 0.2;
       /* Slight shift down and to the right for the second layer */
       top: -5px;  /* Move up slightly */
       left: -5px; /* Move left slightly */
@@ -263,7 +263,7 @@
 
     .api-card {
       width: 80%; /* Reduced card width for smaller cards */
-      max-width: 350px; /* 控制卡片最大宽度 */
+      max-width: 100px; /* 控制卡片最大宽度 */
       margin: 0 auto;    /* 居中卡片 */
     }
 
@@ -283,18 +283,18 @@
     
       if (frontOpacity === "1") {
         // 当前前景图完全可见，切换为透明
-        front.style.opacity = "0.5"; // 前景图片变得透明
+        front.style.opacity = "0.2"; // 前景图片变得透明
         back.style.opacity = "1";  // 背景图片更透明
         caption.innerHTML = 'This is the <strong>impact</strong> result after API modification.';
-      } else if (frontOpacity === "0.5") {
+      } else if (frontOpacity === "0.2") {
         // 当前前景图稍微透明，切换为背景可见
         front.style.opacity = "1"; // 前景图片变得更透明
-        back.style.opacity = "0.5";  // 背景图片恢复
+        back.style.opacity = "0.2";  // 背景图片恢复
         caption.innerHTML = 'This is the <strong>origin</strong> behavior with no added vehicle.';
       } else {
         // 如果透明度是 0.5，恢复为完全可见
         front.style.opacity = "1";   // 恢复前景图为完全可见
-        back.style.opacity = "0.5";  // 背景图片依然保持透明
+        back.style.opacity = "0.2";  // 背景图片依然保持透明
         caption.innerHTML = 'This is the <strong>origin</strong> behavior with no added vehicle.';
       }
     }
@@ -325,6 +325,32 @@
   <section id="intro" data-aos="fade-up">
     <h1 class="section-title">X-DriverSim: LLM-Powered Interactive Simulation for Diverse Drivers</h1>
     <p class="text-center">Simulating diverse human driving styles in mixed traffic environments with real-time LLM reasoning.</p>
+
+    <h2 class="section-title text-center">Abstract & Framework Overview</h2>
+  
+    <!-- Abstract -->
+    <div class="mb-4 px-md-5">
+      <h5><strong>Abstract</strong></h5>
+      <p class="text-justify">
+        While recent advancements in driving simulations have significantly enhanced realism, traffic interaction fidelity remains limited, particularly in modeling diverse human driving styles. Existing methods simplify driving styles to aggressive or cautious behaviors, lacking robustness and real-world complexity. To address this, we introduce X-DriverSim, a closed-loop Autonomous Driving (AD) simulation testing framework featuring a comprehensive driver model. This model decouples core driving abilities from external driving styles. Driving styles are shaped by personality, physical, and environmental factors, with expert AD models managing core tasks, while large language Models (LLMs) generate adaptive, context-sensitive styles that interact with each other and the environment. A key innovation in our approach is the Perception-Driven Style-to-Behavior Transformation (P-S2BT) mechanism, which adjusts the driver’s perception to trigger specific behaviors. To address the abstract nature of driving styles and the complexity of mapping them to behaviors, we employ a Multi-level Dimensionality Reduction Strategy (MDRS) to convert high-level style inputs into behavior descriptions. And then perception is dynamically adjusted through scripts generated, with multi-agent collaboration based on LLMs, eliminating the need for fine-tuning and enhancing efficiency. Experiments across diverse traffic scenarios demonstrate that X-DriverSim effectively detects critical AD system errors, replicates realistic, style-specific behaviors, and provides valuable insights into the impact of varied driving styles on traffic dynamics.
+      </p>
+    </div>
+  
+    <!-- Framework Figure -->
+    <div class="text-center mb-4">
+      <h5><strong>Framework Overview</strong></h5>
+      <img src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/introduction_fig.png" alt="Framework Overview" class="img-fluid rounded shadow-sm" style="max-width: 100%; height: auto;">
+      <img src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/framework_fig.png" alt="Framework Overview" class="img-fluid rounded shadow-sm" style="max-width: 100%; height: auto;">
+      <p class="text-muted mt-2">Figure 1. X-DriverSim closed-loop simulation framework with LLM-driven behavior control and multimodal inputs.</p>
+    </div>
+  
+    <!-- System Architecture -->
+    <div class="text-center">
+      <h5><strong>System Architecture</strong></h5>
+      <img src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/Stable_agents.png" alt="System Architecture Diagram" class="img-fluid rounded shadow-sm" style="max-width: 100%; height: auto;">
+      <img src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/Unstable_agents.png" alt="System Architecture Diagram" class="img-fluid rounded shadow-sm" style="max-width: 100%; height: auto;">
+      <p class="text-muted mt-2">Figure 2. Modular system architecture illustrating perception, behavior generation, simulation interaction, and evaluation modules.</p>
+    </div>
   </section>
 
   <!-- Driving Styles -->
@@ -388,11 +414,11 @@
       <div class="video-section">
 <!--         <video controls loop muted class="video-style mb-3"> -->
         <video controls loop muted class="w-100 mb-3">
-          <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/tellhone_1_hstack_output.mp4" type="video/mp4">
+          <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/tellphone_1_hstack_output.mp4" type="video/mp4">
         </video>
 <!--         <video controls loop muted class="video-style mb-3"> -->
         <video controls loop muted class="w-100 mb-3">
-          <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/tellhone_2_hstack_output.mp4" type="video/mp4">
+          <source src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/tellphone_2_hstack_output.mp4" type="video/mp4">
         </video>
       </div>
       <p class="text-center">Driver distracted by phone while driving.</p>
@@ -450,7 +476,130 @@
   </div>
 </section>
 
+<!-- Quantitative Results -->
+<section id="quant-results" class="my-5" data-aos="fade-up">
+  <h2 class="section-title text-center">Quantitative Results</h2>
+  <p class="text-center">We present the numerical evaluation of different driver behavior models across standard metrics.</p>
+  
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover text-center">
+      <thead class="table-light">
+        <tr>
+          <th>Style</th>
+          <th>Collision Rate (%)</th>
+          <th>Lane Deviation (m)</th>
+          <th>Reaction Time (s)</th>
+          <th>Avg Speed (km/h)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Aggressive</td>
+          <td>27.1</td>
+          <td>0.45</td>
+          <td>0.92</td>
+          <td>58.4</td>
+        </tr>
+        <tr>
+          <td>Cautious</td>
+          <td>3.2</td>
+          <td>0.08</td>
+          <td>1.43</td>
+          <td>32.5</td>
+        </tr>
+        <tr>
+          <td>Tired</td>
+          <td>17.6</td>
+          <td>0.36</td>
+          <td>1.88</td>
+          <td>43.1</td>
+        </tr>
+        <tr>
+          <td>Phone</td>
+          <td>21.5</td>
+          <td>0.42</td>
+          <td>2.13</td>
+          <td>47.8</td>
+        </tr>
+        <tr>
+          <td>Drunk</td>
+          <td>34.9</td>
+          <td>0.61</td>
+          <td>2.21</td>
+          <td>51.2</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
+<!-- Ablation Study -->
+<section id="ablation-study" class="my-5" data-aos="fade-up">
+  <h2 class="section-title text-center">Ablation Study</h2>
+  <p class="text-center">To validate the effectiveness of each component, we conduct ablation experiments on key LLM-driven modules.</p>
+
+  <!-- Ablation Table -->
+  <div class="table-responsive mb-4">
+    <table class="table table-bordered table-hover text-center">
+      <thead class="table-light">
+        <tr>
+          <th>Configuration</th>
+          <th>Collision Rate (%)</th>
+          <th>Behavior Diversity</th>
+          <th>Prompt-Response Accuracy</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Full Model (LLM + Scene Adapter)</td>
+          <td><strong>3.2</strong></td>
+          <td>High</td>
+          <td><strong>94.5%</strong></td>
+        </tr>
+        <tr>
+          <td>– w/o Scene Adapter</td>
+          <td>7.8</td>
+          <td>Medium</td>
+          <td>86.3%</td>
+        </tr>
+        <tr>
+          <td>– w/o LLM Planning</td>
+          <td>18.4</td>
+          <td>Low</td>
+          <td>62.7%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Ablation Visualization -->
+  <div class="row justify-content-center">
+    <div class="col-md-4 mb-3">
+      <div class="card shadow-sm">
+        <img src="images/ablation_full_model.png" class="card-img-top" alt="Full Model Behavior">
+        <div class="card-body text-center">
+          <p class="card-text">Full model produces smooth and responsive driving.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="card shadow-sm">
+        <img src="images/ablation_no_adapter.png" class="card-img-top" alt="No Adapter Behavior">
+        <div class="card-body text-center">
+          <p class="card-text">Without scene adapter, response becomes delayed.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="card shadow-sm">
+        <img src="images/ablation_no_llm.png" class="card-img-top" alt="No LLM Behavior">
+        <div class="card-body text-center">
+          <p class="card-text">Without LLM, behavior lacks goal alignment.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
@@ -463,7 +612,7 @@
   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
     <div class="col">
-      <div class="card api-card shadow-sm rounded border-light">
+      <div class="api-card card shadow-sm rounded border-light">
         <div class="card-body text-center">
           <h5 class="card-title">Add Other Vehicle</h5>
     
