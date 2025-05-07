@@ -217,7 +217,7 @@
 
     .api-image-container {
       position: relative;
-      width: 60%; /* 控制容器的宽度，这里设置为 80% */
+      width: 80%; /* 控制容器的宽度，这里设置为 80% */
       max-width: 400px; /* 设置最大宽度，防止过大 */
       height: auto; /* 根据宽度自动调整高度 */
       aspect-ratio: 16 / 9;
@@ -267,6 +267,14 @@
       margin: 0 auto;    /* 居中卡片 */
       height: 200px; /* 🔹 添加这一行设定固定高度 */
     }
+
+    .api-card .card-body {
+/*       font-family: "Segoe UI", sans-serif; /* 自定义字体族 */ */
+      font-size: 0.95rem;                  /* 字体大小（可选） */
+      font-weight: 400;                    /* 字重（可选） */
+      color: #333;                         /* 字体颜色（可选） */
+    }
+
 
     
   </style>
@@ -348,10 +356,25 @@
     <!-- System Architecture -->
     <div class="text-center">
       <h5><strong>System Architecture</strong></h5>
-      <img src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/Stable_agents.png" alt="System Architecture Diagram" class="img-fluid rounded shadow-sm" style="max-width: 47%; height: auto;">
-      <img src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/Unstable_agents.png" alt="System Architecture Diagram" class="img-fluid rounded shadow-sm" style="max-width: 47%; height: auto;">
-      <p class="text-muted mt-2">Figure 2. Modular system architecture illustrating perception, behavior generation, simulation interaction, and evaluation modules.</p>
+  
+      <!-- 🔽 用 Flex 容器包裹两张图 -->
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <img src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/Stable_agents.png" 
+             alt="Stable Agents" 
+             class="img-fluid rounded shadow-sm" 
+             style="max-width: 47%; height: auto;">
+             
+        <img src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/Unstable_agents.png" 
+             alt="Unstable Agents" 
+             class="img-fluid rounded shadow-sm" 
+             style="max-width: 47%; height: auto;">
+      </div>
+  
+      <p class="text-muted mt-2">
+        Figure 2. Modular system architecture illustrating perception, behavior generation, simulation interaction, and evaluation modules.
+      </p>
     </div>
+    
   </section>
 
   <!-- Driving Styles -->
