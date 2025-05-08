@@ -816,61 +816,56 @@
       </div>
     </div>
 
-
-    <!-- 大卡片容器 -->
-    <hr>
-    <div class="card shadow-sm rounded p-4 mb-5 mx-auto" style="background-color: #f7f7f7; width: 90%; max-width: 1200px;">
-    <h5 class="text-center mb-4">Stop Sign API</h5>
-
-<!--     <div class="row justify-content-center"> -->
-    <div class="d-flex flex-wrap justify-content-center gap-4">
-      
-    <!-- Impact Stop Sign Distance -->
-      <div class="col-md-4 mb-4">
-        <div class="card shadow-sm rounded text-center p-3">
-            <h6>Impact Stop Sign Distance</h6>
-      
-            <div class="api-image-container" onclick="toggleApiImage(this)">
-              <img class="api-img img-front" src="images/aa_tool_experiments/impact_stop_sign_distance/origin_bev.png" alt="Origin BEV">
-              <img class="api-img img-back" src="images/aa_tool_experiments/impact_stop_sign_distance/impact_bev.png" alt="Impact BEV">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+        
+        <!-- 大卡片容器 -->
+        <hr>
+        <div class="card shadow-sm rounded p-4 mb-5" style="background-color: #f7f7f7; width: 100%;">
+          <h5 class="mb-4 fw-semibold">Stop Sign API</h5>
+    
+          <!-- 使用 d-flex 横向排列子卡片 -->
+          <div class="d-flex flex-wrap justify-content-start gap-4">
+          
+            <!-- Impact Stop Sign Distance -->
+            <div class="card shadow-sm rounded text-center p-3"  style="width: 250px;">
+                <h6>Impact Stop Sign Distance</h6>
+                <div class="api-image-container" onclick="toggleApiImage(this)">
+                  <img class="api-img img-front" src="images/aa_tool_experiments/impact_stop_sign_distance/origin_bev.png" alt="Origin BEV">
+                  <img class="api-img img-back" src="images/aa_tool_experiments/impact_stop_sign_distance/impact_bev.png" alt="Impact BEV">
+                </div>
+                <p class="api-caption"><strong>Origin</strong> BEV</p>
             </div>
-      
-            <p class="api-caption"><strong>Origin</strong> BEV</p>
+        
+            <!-- Impact Stop Sign Size -->
+            <div class="card shadow-sm rounded text-center p-3">
+                <h6>Impact Stop Sign Size</h6>
+                <div class="api-image-container" onclick="toggleApiImage(this)">
+                  <img class="api-img img-front" src="images/aa_tool_experiments/impact_stop_sign_size/origin_bev.png" alt="Origin BEV">
+                  <img class="api-img img-back" src="images/aa_tool_experiments/impact_stop_sign_size/impact_bev.png" alt="Impact BEV">
+                </div>
+                <p class="api-caption"><strong>Origin</strong> BEV</p>
+            </div>
+    
+            <!-- Add Stop Sign -->
+            <div class="card shadow-sm rounded text-center p-3">
+                <h6>Add Stop Sign</h6>
+                <div class="api-image-container" onclick="toggleApiImage(this)">
+                  <!-- Layer 1: Origin BEV -->
+                  <img class="api-img img-front" src="images/aa_tool_experiments/add_stop_sign/origin_bev.png" alt="Origin BEV">
+                  <!-- Layer 2: Impact BEV with slight opacity for partial visibility -->
+                  <img class="api-img img-back" src="images/aa_tool_experiments/add_stop_sign/impact_bev.png" alt="Impact BEV">
+                </div>
+                <p class="api-caption"><strong>Origin</strong> BEV</p>
+            </div>
+    
         </div>
       </div>
     
-    <!-- Impact Stop Sign Size -->
-    <div class="col-md-4 mb-4">
-      <div class="card shadow-sm rounded text-center p-3">
-          <h6>Impact Stop Sign Size</h6>
-    
-          <div class="api-image-container" onclick="toggleApiImage(this)">
-            <img class="api-img img-front" src="images/aa_tool_experiments/impact_stop_sign_size/origin_bev.png" alt="Origin BEV">
-            <img class="api-img img-back" src="images/aa_tool_experiments/impact_stop_sign_size/impact_bev.png" alt="Impact BEV">
-          </div>
-    
-          <p class="api-caption"><strong>Origin</strong> BEV</p>
-      </div>
     </div>
-
-    <!-- Add Stop Sign -->
-    <div class="col-md-4 mb-4">
-      <div class="card shadow-sm rounded text-center p-3">
-          <h6>Add Stop Sign</h6>
-    
-          <div class="api-image-container" onclick="toggleApiImage(this)">
-            <!-- Layer 1: Origin BEV -->
-            <img class="api-img img-front" src="images/aa_tool_experiments/add_stop_sign/origin_bev.png" alt="Origin BEV">
-            <!-- Layer 2: Impact BEV with slight opacity for partial visibility -->
-            <img class="api-img img-back" src="images/aa_tool_experiments/add_stop_sign/impact_bev.png" alt="Impact BEV">
-          </div>
-    
-          <p class="api-caption"><strong>Origin</strong> BEV</p>
-      </div>
-    </div>
-
   </div>
-  </div>
+</div>
 
       
     <!-- About traffic light -->
