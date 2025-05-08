@@ -274,12 +274,10 @@
     }
     
     .api-card {
-/*       width: 80%; /* Reduced card width for smaller cards */ */
+      width: 250px;               /* ✅ 必须明确设置固定宽度 */
       max-width: 250px; /* 控制卡片最大宽度 */
       flex: 0 0 auto;           /* 不让其拉伸 */
       margin-bottom: 1rem;      /* 行间距（如果换行时） */
-/*       margin: 0 auto;    /* 居中卡片 */ */
-/*       height: 200px; /* 🔹 添加这一行设定固定高度 */ */
     }
 
     .api-card .card-title {
@@ -838,7 +836,7 @@
           <div class="api-section-container">
           
             <!-- Impact Stop Sign Distance -->
-            <div class="card api-card shadow-sm text-center p-3">
+            <div class="api-card card shadow-sm text-center p-3">
                 <h6>Impact Stop Sign Distance</h6>
                 <div class="api-image-container" onclick="toggleApiImage(this)">
                   <img class="api-img img-front" src="images/aa_tool_experiments/impact_stop_sign_distance/origin_bev.png" alt="Origin BEV">
@@ -848,7 +846,7 @@
             </div>
         
             <!-- Impact Stop Sign Size -->
-            <div class="card api-card shadow-sm text-center p-3">
+            <div class="api-card card shadow-sm text-center p-3">
                 <h6>Impact Stop Sign Size</h6>
                 <div class="api-image-container" onclick="toggleApiImage(this)">
                   <img class="api-img img-front" src="images/aa_tool_experiments/impact_stop_sign_size/origin_bev.png" alt="Origin BEV">
@@ -858,7 +856,7 @@
             </div>
     
             <!-- Add Stop Sign -->
-            <div class="card api-card shadow-sm text-center p-3">
+            <div class="api-card card shadow-sm text-center p-3">
                 <h6>Add Stop Sign</h6>
                 <div class="api-image-container" onclick="toggleApiImage(this)">
                   <!-- Layer 1: Origin BEV -->
