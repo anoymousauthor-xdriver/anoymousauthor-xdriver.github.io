@@ -688,7 +688,7 @@
   
 <!-- API Effects -->
 <section id="apis" class="my-5">
-  <h2 class="section-title text-center mb-4">API Behavior Modifications</h2>
+  <h2 class="section-title text-center mb-4">API Effects</h2>
 
     <!-- Other Vehicle API -->
     <hr>
@@ -857,28 +857,21 @@
     function toggleApiImage(container) {
       const front = container.querySelector('.img-front');
       const back = container.querySelector('.img-back');
-      const caption = container.closest('.card-body').querySelector('.api-caption');
-      
-      // 使用 getComputedStyle 来获取当前的透明度
-      const frontOpacity = window.getComputedStyle(front).opacity;
+      const caption = container.closest('.api-card').querySelector('.api-caption');
     
-      if (frontOpacity === "1") {
-        // 当前前景图完全可见，切换为透明
-        front.style.opacity = "0.2"; // 前景图片变得透明
-        back.style.opacity = "1";  // 背景图片更透明
-        caption.innerHTML = '<strong>Impact</strong> BEV';
-      } else if (frontOpacity === "0.2") {
-        // 当前前景图稍微透明，切换为背景可见
-        front.style.opacity = "1"; // 前景图片变得更透明
-        back.style.opacity = "0.2";  // 背景图片恢复
-        caption.innerHTML = '<strong>Origin</strong> BEV';
-      } else {
-        // 如果透明度是 0.5，恢复为完全可见
-        front.style.opacity = "1";   // 恢复前景图为完全可见
-        back.style.opacity = "0.2";  // 背景图片依然保持透明
-        caption.innerHTML = '<strong>Origin</strong> BEV';
-      }
+      // 判断当前是否显示的是 origin 图
+      const showingOrigin = window.getComputedStyle(front).opacity === "1";
+    
+      // 切换透明度
+      front.style.opacity = showingOrigin ? "0.2" : "1";
+      back.style.opacity = showingOrigin ? "1" : "0.2";
+    
+      // 更新文字
+      caption.innerHTML = showingOrigin
+        ? "<strong>Impact</strong> BEV"
+        : "<strong>Origin</strong> BEV";
     }
+
 
   </script>
 
