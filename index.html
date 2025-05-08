@@ -266,14 +266,12 @@
 /*       left: -8px; /* Move left slightly */ */
     }
     
-    .api-image-container:hover .img-front {
-      transform: scale(1.05);
+    /* Hover 效果（不会引起偏移） */
+    .api-image-container:hover .img-front,
+    .api-image-container:hover .img-back {
+      transform: translate(-50%, -50%) scale(1.05);
     }
     
-    .api-image-container:hover .img-back {
-      transform: scale(1.05);
-    }
-
     .api-card {
       width: 80%; /* Reduced card width for smaller cards */
       max-width: 250px; /* 控制卡片最大宽度 */
@@ -282,7 +280,7 @@
     }
 
     .api-card .card-title {
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       font-weight: 600;
       text-align: center;
       color: #333;
@@ -290,7 +288,7 @@
     }
 
     .api-card-title {
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       font-weight: 600;
       text-align: center;
       color: #333;
@@ -371,7 +369,7 @@
     <!-- Framework Figure -->
     <div class="text-center mb-4">
       <h5><strong>Framework Overview</strong></h5>
-      <img src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/framework_fig.png" alt="Framework Overview" class="img-fluid rounded shadow-sm" style="max-width: 90%; height: auto;">
+      <img src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/framework_fig.png" alt="Framework Overview" class="img-fluid rounded shadow-sm" style="max-width: 95%; height: auto;">
       <p class="text-muted mt-2">Figure 1. X-DriverSim closed-loop simulation framework with LLM-driven behavior control and multimodal inputs.</p>
     </div>
 
@@ -384,12 +382,12 @@
         <img src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/Stable_agents.png" 
              alt="Stable Agents" 
              class="img-fluid rounded shadow-sm" 
-             style="max-width: 47%; height: auto;">
+             style="max-width: 45%; height: auto;">
              
         <img src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/Unstable_agents.png" 
              alt="Unstable Agents" 
              class="img-fluid rounded shadow-sm" 
-             style="max-width: 47%; height: auto;">
+             style="max-width: 45%; height: auto;">
       </div>
   
       <p class="text-muted mt-2">
@@ -530,10 +528,10 @@
       <thead class="table-light">
         <tr>
           <th>TS</th>
-          <th>DS (Interfuser as Tested AD Model)</th>
+          <th style="width: 10%;">DS (Interfuser as Tested AD Model)</th>
           <th>RC</th>
           <th>TS</th>
-          <th>DS (Interfuser as Tested AD Model)</th>
+          <th style="width: 10%;">DS (Interfuser as Tested AD Model)</th>
           <th>RC</th>
         </tr>
       </thead>
@@ -637,10 +635,10 @@
       <thead class="table-light">
         <tr>
           <th>TS</th>
-          <th>Tested AD Model</th>
+          <th style="width: 10%;">Tested AD Model</th>
           <th>DS</th>
           <th>RC</th>
-          <th>Tested AD Model</th>
+          <th style="width: 10%;">Tested AD Model</th>
           <th>DS</th>
           <th>RC</th>
         </tr>
