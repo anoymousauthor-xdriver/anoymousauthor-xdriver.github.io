@@ -339,20 +339,19 @@
 </nav>
 
 <div class="container">
-  <!-- Intro -->
-  <section id="intro" data-aos="fade-up">
+  <!-- Title -->
+  <section id="title" data-aos="fade-up">
     <h1 class="section-title">X-DriverSim: LLM-Powered Interactive Simulation for Diverse Drivers</h1>
     <p class="text-center">Simulating diverse human driving styles in mixed traffic environments with apdactive LLM reasoning.</p>
-
-    h2 class="section-title text-center">Abstract</h2>
-    <!-- Abstract -->
     <div class="mb-4 px-md-5">
-<!--       <h5><strong>Abstract</strong></h5> -->
+      <h5><strong>Abstract</strong></h5>
       <p class="text-justify">
         While recent advancements in driving simulations have significantly enhanced realism, traffic interaction fidelity remains limited, particularly in modeling diverse human driving styles. Existing methods simplify driving styles to aggressive or cautious behaviors, lacking robustness and real-world complexity. To address this, we introduce X-DriverSim, a closed-loop Autonomous Driving (AD) simulation testing framework featuring a comprehensive driver model. This model decouples core driving abilities from external driving styles. Driving styles are shaped by personality, physical, and environmental factors, with expert AD models managing core tasks, while large language Models (LLMs) generate adaptive, context-sensitive styles that interact with each other and the environment. A key innovation in our approach is the Perception-Driven Style-to-Behavior Transformation (P-S2BT) mechanism, which adjusts the driver’s perception to trigger specific behaviors. To address the abstract nature of driving styles and the complexity of mapping them to behaviors, we employ a Multi-level Dimensionality Reduction Strategy (MDRS) to convert high-level style inputs into behavior descriptions. And then perception is dynamically adjusted through scripts generated, with multi-agent collaboration based on LLMs, eliminating the need for fine-tuning and enhancing efficiency. Experiments across diverse traffic scenarios demonstrate that X-DriverSim effectively detects critical AD system errors, replicates realistic, style-specific behaviors, and provides valuable insights into the impact of varied driving styles on traffic dynamics.
       </p>
     </div>
-    
+  </section>
+  
+  <section id="intro" data-aos="fade-up">   
     <h2 class="section-title text-center">Method</h2>
     <!-- Framework Figure -->
     <div class="text-center mb-4">
@@ -490,7 +489,7 @@
         <h5 class="card-title">Case 2: Fatigue-Induced Rear-End Collision</h5>
         <img src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/CaseStudy_fai.png" alt="Fatigue-Induced Rear-End Collision" class="img-fluid mb-3 accident-img">
         <p><strong>Description:</strong> A fatigued driver in a yellow benz rear-ends the AV due to delayed reaction time. When a police car suddenly changes lanes, the cautious AV performs an emergency stop. However, the fatigued Mercedes misperceives the AV’s position and braking intent due to cognitive delay in Impact BEV perception, leading to a late response and an unavoidable rear-end crash. This exposes the AV’s vulnerability to erratic human behavior, like fatigue.<br>
-          <strong>Similar with real world acciden case:</strong> NHTSA: 2005041508481 https://crashviewer.nhtsa.dot.gov/nass-NMVCCS/CaseForm.aspx?xsl=main.xsl&CaseID=2005041508481</p>
+          <strong>Similar with real world acciden case:</strong> a href="https://crashviewer.nhtsa.dot.gov/nass-NMVCCS/CaseForm.aspx?xsl=main.xsl&CaseID=2005041508481"> NHTSA: 2005041508481</a></p>
       </div>
     </div>
 
@@ -500,7 +499,7 @@
         <h5 class="card-title">Case 3: Distracted Driving-Induced Side Collision</h5>
         <img src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/CaseStudy_dis.png" alt="Distracted Driving-Induced Side Collision" class="img-fluid mb-3 accident-img">
         <p><strong>Description:</strong> A distracted driver in an orange Carlarmotor collides with the AV while changing lanes. The distracted driver, engaged in an unrelated task (e.g., using a mobile phone), misjudging its position due to delayed situational awareness (Impact BEV perception delay). As a result, the Carlarmotor initiates a right-lane change, assuming the AV is farther behind than it actually is, leading to a direct side collision. This highlights the risks of distraction and the need for AVs to predict human attention lapses.<br>
-          <strong>Similar with real world acciden case:</strong> NHTSA: 2007045403168 https://crashviewer.nhtsa.dot.gov/nass-NMVCCS/CaseForm.aspx?xsl=main.xsl&CaseID=2007045403168</p>
+          <strong>Similar with real world acciden case:</strong> <a href="https://crashviewer.nhtsa.dot.gov/nass-NMVCCS/CaseForm.aspx?xsl=main.xsl&CaseID=2007045403168"NHTSA: 2007045403168</a></p>
       </div>
     </div>
   </div>
@@ -510,7 +509,7 @@
 <section id="quants" class="my-5" data-aos="fade-up">
   <h2 class="section-title text-center">Quantitative Results</h2>
   <p class="text-center">We present the numerical evaluation of different driver behavior models across standard metrics. 
-    Traffic Style(TS), Driving Score(DS, Interfuser as AD Tested Model), Route Completion(RC). </p>
+    Traffic Style(TS), Driving Score(DS), Route Completion(RC). </p>
   
   <div class="table-responsive">
     <table class="table table-bordered table-hover text-center"  style="margin: 0 auto; width: 85%; max-width: 1000px;">
@@ -673,14 +672,14 @@
   <!-- Ablation Visualization -->
   <div class="row justify-content-center">
     <div class="col-md-10 col-lg-8 text-center mb-4">
-      <h5><strong>Framework Overview</strong></h5>
+      <h5><strong>Multi-Level Dimensionality Reduction Strategy Study</strong></h5>
       <img 
         src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/Trajectory_validation.png" 
         alt="Framework Overview" 
         class="img-fluid rounded shadow-sm" 
         style="max-width: 100%; height: auto;"> <!-- 👈 控制实际显示宽度 -->
       <p class="text-muted mt-2">
-        Figure 1. X-DriverSim closed-loop simulation framework with LLM-driven behavior control and multimodal inputs.
+        Comparison of Effectiveness Verification of Multi-Level Dimensionality Reduction with and without Strategy.
       </p>
     </div>
   </div>
@@ -728,7 +727,7 @@
         <p class="api-caption"><strong>Origin</strong> BEV</p>
       </div>
       <div class="api-card card shadow-sm text-center p-3">
-        <h6>Add Other Vehicle</h6>
+        <h6>Add Other Vehicle<br></h6>
         <div class="api-image-container" onclick="toggleApiImage(this)">
           <img class="api-img img-front" src="images/aa_tool_experiments/add_other_vehicle/origin_bev.png" alt="Origin BEV">
           <img class="api-img img-back" src="images/aa_tool_experiments/add_other_vehicle/impact_bev.png" alt="Impact BEV">
@@ -737,35 +736,6 @@
       </div>
     </div>
 
-    <!-- Stop Sign API -->
-    <hr>
-    <h5 class="mb-4 fw-semibold">Stop Sign API</h5>
-    <div class="api-section-container d-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; justify-content: start;">
-      <div class="api-card card shadow-sm text-center p-3">
-        <h6>Impact Stop Sign Distance</h6>
-        <div class="api-image-container" onclick="toggleApiImage(this)">
-          <img class="api-img img-front" src="images/aa_tool_experiments/impact_stop_sign_distance/origin_bev.png" alt="Origin BEV">
-          <img class="api-img img-back" src="images/aa_tool_experiments/impact_stop_sign_distance/impact_bev.png" alt="Impact BEV">
-        </div>
-        <p class="api-caption"><strong>Origin</strong> BEV</p>
-      </div>
-      <div class="api-card card shadow-sm text-center p-3">
-        <h6>Impact Stop Sign Size</h6>
-        <div class="api-image-container" onclick="toggleApiImage(this)">
-          <img class="api-img img-front" src="images/aa_tool_experiments/impact_stop_sign_size/origin_bev.png" alt="Origin BEV">
-          <img class="api-img img-back" src="images/aa_tool_experiments/impact_stop_sign_size/impact_bev.png" alt="Impact BEV">
-        </div>
-        <p class="api-caption"><strong>Origin</strong> BEV</p>
-      </div>
-      <div class="api-card card shadow-sm text-center p-3">
-        <h6>Add Stop Sign</h6>
-        <div class="api-image-container" onclick="toggleApiImage(this)">
-          <img class="api-img img-front" src="images/aa_tool_experiments/add_stop_sign/origin_bev.png" alt="Origin BEV">
-          <img class="api-img img-back" src="images/aa_tool_experiments/add_stop_sign/impact_bev.png" alt="Impact BEV">
-        </div>
-        <p class="api-caption"><strong>Origin</strong> BEV</p>
-      </div>
-    </div>
 
     <!-- Traffic Light API -->
     <hr>
@@ -805,6 +775,35 @@
       </div>
     </div>
 
+    <!-- Stop Sign API -->
+    <hr>
+    <h5 class="mb-4 fw-semibold">Stop Sign API</h5>
+    <div class="api-section-container d-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; justify-content: start;">
+      <div class="api-card card shadow-sm text-center p-3">
+        <h6>Impact Stop Sign Distance</h6>
+        <div class="api-image-container" onclick="toggleApiImage(this)">
+          <img class="api-img img-front" src="images/aa_tool_experiments/impact_stop_sign_distance/origin_bev.png" alt="Origin BEV">
+          <img class="api-img img-back" src="images/aa_tool_experiments/impact_stop_sign_distance/impact_bev.png" alt="Impact BEV">
+        </div>
+        <p class="api-caption"><strong>Origin</strong> BEV</p>
+      </div>
+      <div class="api-card card shadow-sm text-center p-3">
+        <h6>Impact Stop Sign Size</h6>
+        <div class="api-image-container" onclick="toggleApiImage(this)">
+          <img class="api-img img-front" src="images/aa_tool_experiments/impact_stop_sign_size/origin_bev.png" alt="Origin BEV">
+          <img class="api-img img-back" src="images/aa_tool_experiments/impact_stop_sign_size/impact_bev.png" alt="Impact BEV">
+        </div>
+        <p class="api-caption"><strong>Origin</strong> BEV</p>
+      </div>
+      <div class="api-card card shadow-sm text-center p-3">
+        <h6>Add Stop Sign</h6>
+        <div class="api-image-container" onclick="toggleApiImage(this)">
+          <img class="api-img img-front" src="images/aa_tool_experiments/add_stop_sign/origin_bev.png" alt="Origin BEV">
+          <img class="api-img img-back" src="images/aa_tool_experiments/add_stop_sign/impact_bev.png" alt="Impact BEV">
+        </div>
+        <p class="api-caption"><strong>Origin</strong> BEV</p>
+      </div>
+    </div>
 
     <!-- Road API -->
     <hr>
