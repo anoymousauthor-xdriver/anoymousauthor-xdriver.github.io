@@ -507,51 +507,202 @@
     <table class="table table-bordered table-hover text-center">
       <thead class="table-light">
         <tr>
-          <th>Style</th>
-          <th>Collision Rate (%)</th>
-          <th>Lane Deviation (m)</th>
-          <th>Reaction Time (s)</th>
-          <th>Avg Speed (km/h)</th>
+          <th>Style Comb.</th>
+          <th>DS</th>
+          <th>RC</th>
+          <th>Style Comb.</th>
+          <th>DS</th>
+          <th>RC</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Aggressive</td>
-          <td>27.1</td>
-          <td>0.45</td>
-          <td>0.92</td>
-          <td>58.4</td>
+          <td>No-No-No</td>
+          <td>88.7</td>
+          <td>100.0</td>
+          <td>Ag-No-No</td>
+          <td>45.5</td>
+          <td>100.0</td>
         </tr>
         <tr>
-          <td>Cautious</td>
-          <td>3.2</td>
-          <td>0.08</td>
-          <td>1.43</td>
-          <td>32.5</td>
+          <td>Ca-No-No</td>
+          <td>78.1</td>
+          <td>100.0</td>
+          <td>No-Dr-No</td>
+          <td>47.7</td>
+          <td>61.2</td>
         </tr>
         <tr>
-          <td>Tired</td>
-          <td>17.6</td>
-          <td>0.36</td>
-          <td>1.88</td>
-          <td>43.1</td>
-        </tr>
-        <tr>
-          <td>Phone</td>
-          <td>21.5</td>
-          <td>0.42</td>
-          <td>2.13</td>
-          <td>47.8</td>
-        </tr>
-        <tr>
-          <td>Drunk</td>
-          <td>34.9</td>
-          <td>0.61</td>
-          <td>2.21</td>
-          <td>51.2</td>
+          <td>No-Fa-No</td>
+          <td>61.9</td>
+          <td>100.0</td>
+          <td>No-No-Di</td>
+          <td>64.6</td>
+          <td>100.0</td>
         </tr>
       </tbody>
     </table>
+
+    <table class="table table-bordered table-hover text-center">
+      <thead class="table-light">
+        <tr>
+          <th>Style Comb.</th>
+          <th>DS</th>
+          <th>RC</th>
+          <th>Style Comb.</th>
+          <th>DS</th>
+          <th>RC</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>No-Dr-Di</td>
+          <td>68.7</td>
+          <td>100</td>
+          <td>No-Fa-Di</td>
+          <td>40.0</td>
+          <td>89.0</td>
+        </tr>
+        <tr>
+          <td>Ag-Dr-No</td>
+          <td>35.3</td>
+          <td>100</td>
+          <td>Ca-Dr-No</td>
+          <td>85.3</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>Ag-Fa-No</td>
+          <td>62.7</td>
+          <td>100</td>
+          <td>Ca-Fa-No</td>
+          <td>63.0</td>
+          <td>94.3</td>
+        </tr>
+        <tr>
+          <td>Ag-No-Di</td>
+          <td>37.3</td>
+          <td>86.1</td>
+          <td>Ca-No-Di</td>
+          <td>51.7</td>
+          <td>86.2</td>
+        </tr>
+        <tr>
+          <td>Ag-Dr-Di</td>
+          <td>43.0</td>
+          <td>100</td>
+          <td>Ca-Dr-Di</td>
+          <td>75.9</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>Ag-Fa-Di</td>
+          <td>44.7</td>
+          <td>100</td>
+          <td>Ca-Fa-Di</td>
+          <td>53.3</td>
+          <td>94.6</td>
+        </tr>
+        <tr>
+          <td>Ag-Dr-Fa-No</td>
+          <td>58.1</td>
+          <td>100</td>
+          <td>Ag-Dr-Fa-Di</td>
+          <td>41.0</td>
+          <td>100</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="table table-bordered table-hover text-center">
+      <thead class="table-light">
+        <tr>
+          <th>Comb. of Scenario</th>
+          <th>Num.</th>
+          <th>DS</th>
+          <th>RC</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ag-Dr-No</td>
+          <td>10</td>
+          <td>43.1</td>
+          <td>87.3</td>
+        </tr>
+        <tr>
+          <td>Ca-No-Di</td>
+          <td>10</td>
+          <td>43.1</td>
+          <td>87.3</td>
+        </tr>
+        <tr>
+          <td>No-Fa-Di</td>
+          <td>10</td>
+          <td>43.1</td>
+          <td>87.3</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="table table-bordered table-hover text-center">
+      <thead class="table-light">
+        <tr>
+          <th>AD Model</th>
+          <th>Normal</th>
+          <th>Aggressive</th>
+          <th>Multi</th>
+          <th>Mixed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>InterFuser</td>
+          <td>88.7, 100</td>
+          <td>45.5, 100</td>
+          <td>43.0, 100</td>
+          <td>71.9, 100</td>
+        </tr>
+        <tr>
+          <td>TFPP</td>
+          <td>90.6, 100</td>
+          <td>52.9, 94.8</td>
+          <td>50.3, 95.8</td>
+          <td>82.3, 100</td>
+        </tr>
+        <tr>
+          <td>AIM</td>
+          <td>82.4, 100</td>
+          <td>26.7, 100</td>
+          <td>30.3, 100</td>
+          <td>62.2, 100</td>
+        </tr>
+        <tr>
+          <td>VAD</td>
+          <td>13.9, 34.6</td>
+          <td>10.2, 30.5</td>
+          <td>9.3, 30.1</td>
+          <td>10.0, 32.0</td>
+        </tr>
+        <tr>
+          <td>ST-P3</td>
+          <td>5.56, 72.6</td>
+          <td>3.5, 56.0</td>
+          <td>3.8, 55.7</td>
+          <td>4.12, 67.0</td>
+        </tr>
+        <tr>
+          <td>LMDrive</td>
+          <td>19.8, 26.4</td>
+          <td>11.5, 22.3</td>
+          <td>13.2, 25.4</td>
+          <td>15.5, 25.6</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
   </div>
 </section>
 
@@ -565,43 +716,59 @@
     <table class="table table-bordered table-hover text-center">
       <thead class="table-light">
         <tr>
-          <th>Configuration</th>
-          <th>Collision Rate (%)</th>
-          <th>Behavior Diversity</th>
-          <th>Prompt-Response Accuracy</th>
+          <th>Style Comb.</th>
+          <th>DS</th>
+          <th>RC</th>
+          <th>Style Comb.</th>
+          <th>DS</th>
+          <th>RC</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Full Model (LLM + Scene Adapter)</td>
-          <td><strong>3.2</strong></td>
-          <td>High</td>
-          <td><strong>94.5%</strong></td>
+          <td>No-Expert</td>
+          <td>91.2</td>
+          <td>100</td>
+          <td>Dr-Expert</td>
+          <td>78.6</td>
+          <td>100</td>
         </tr>
         <tr>
-          <td>– w/o Scene Adapter</td>
-          <td>7.8</td>
-          <td>Medium</td>
-          <td>86.3%</td>
+          <td>Ag-Expert</td>
+          <td>79.2</td>
+          <td>100</td>
+          <td>Fa-Expert</td>
+          <td>82.4</td>
+          <td>100</td>
         </tr>
         <tr>
-          <td>– w/o LLM Planning</td>
-          <td>18.4</td>
-          <td>Low</td>
-          <td>62.7%</td>
+          <td>Ca-Expert</td>
+          <td>88.0</td>
+          <td>100</td>
+          <td>Di-Expert</td>
+          <td>84.2</td>
+          <td>100</td>
         </tr>
       </tbody>
     </table>
+
   </div>
 
   <!-- Ablation Visualization -->
   <div class="row justify-content-center">
-    <div class="text-center mb-4">
+    <div class="col-md-10 col-lg-8 text-center mb-4">
       <h5><strong>Framework Overview</strong></h5>
-      <img src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/Trajectory_validation.png" alt="Framework Overview" class="img-fluid rounded shadow-sm" style="max-width: 100%; height: auto;">
-      <p class="text-muted mt-2">Figure 1. X-DriverSim closed-loop simulation framework with LLM-driven behavior control and multimodal inputs.</p>
+      <img 
+        src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/Trajectory_validation.png" 
+        alt="Framework Overview" 
+        class="img-fluid rounded shadow-sm" 
+        style="max-width: 70%; height: auto;"> <!-- 👈 控制实际显示宽度 -->
+      <p class="text-muted mt-2">
+        Figure 1. X-DriverSim closed-loop simulation framework with LLM-driven behavior control and multimodal inputs.
+      </p>
     </div>
   </div>
+
 </section>
 
 
@@ -614,6 +781,73 @@
   <h2 class="section-title text-center mb-4">New API Behavior Modifications</h2>
   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
+    <!-- About Other Vehicle -->
+
+    <!-- Impact Other Vehicle Distance -->
+    <div class="col">
+      <div class="api-card card shadow-sm rounded border-light">
+        <div class="card-body text-center">
+          <h5 class="card-title">Impact Other Vehicle Distance</h5>
+    
+          <div class="api-image-container" onclick="toggleApiImage(this)">
+            <img class="api-img img-front" src="images/aa_tool_experiments/impact_other_vehicle_distance/origin_bev.png" alt="Origin BEV">
+            <img class="api-img img-back" src="images/aa_tool_experiments/impact_other_vehicle_distance/impact_bev.png" alt="Impact BEV">
+          </div>
+    
+          <p class="api-caption mt-2"><strong>Origin</strong> BEV</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Impact Other Vehicle Heading -->
+    <div class="col">
+      <div class="api-card card shadow-sm rounded border-light">
+        <div class="card-body text-center">
+          <h5 class="card-title">Impact Other Vehicle Heading</h5>
+    
+          <div class="api-image-container" onclick="toggleApiImage(this)">
+            <img class="api-img img-front" src="images/aa_tool_experiments/impact_other_vehicle_heading/origin_bev.png" alt="Origin BEV">
+            <img class="api-img img-back" src="images/aa_tool_experiments/impact_other_vehicle_heading/impact_bev.png" alt="Impact BEV">
+          </div>
+    
+          <p class="api-caption mt-2"><strong>Origin</strong> BEV</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Impact Other Vehicle Size -->
+    <div class="col">
+      <div class="api-card card shadow-sm rounded border-light">
+        <div class="card-body text-center">
+          <h5 class="card-title">Impact Other Vehicle Size</h5>
+    
+          <div class="api-image-container" onclick="toggleApiImage(this)">
+            <img class="api-img img-front" src="images/aa_tool_experiments/impact_other_vehicle_size/origin_bev.png" alt="Origin BEV">
+            <img class="api-img img-back" src="images/aa_tool_experiments/impact_other_vehicle_size/impact_bev.png" alt="Impact BEV">
+          </div>
+    
+          <p class="api-caption mt-2"><strong>Origin</strong> BEV</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Impact Other Vehicle Speed -->
+    <div class="col">
+      <div class="api-card card shadow-sm rounded border-light">
+        <div class="card-body text-center">
+          <h5 class="card-title">Impact Other Vehicle Speed</h5>
+    
+          <div class="api-image-container" onclick="toggleApiImage(this)">
+            <img class="api-img img-front" src="images/aa_tool_experiments/impact_other_vehicle_speed/origin_bev.png" alt="Origin BEV">
+            <img class="api-img img-back" src="images/aa_tool_experiments/impact_other_vehicle_speed/impact_bev.png" alt="Impact BEV">
+          </div>
+    
+          <p class="api-caption mt-2"><strong>Origin</strong> BEV</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Other Vehicle -->
     <div class="col">
       <div class="api-card card shadow-sm rounded border-light">
         <div class="card-body text-center">
@@ -632,94 +866,169 @@
     </div>
 
 
-
-    <!-- add_other_vehicle -->
+    <!-- About stop sign -->
+    <!-- Impact Stop Sign Distance -->
     <div class="col">
-      <div class="card shadow-sm rounded border-light">
-        <div class="card-body">
-          <h5 class="card-title text-center">Add Other Vehicle</h5>
-          <div class="image-grid">
-            <img src="images/aa_tool_experiments/add_other_vehicle/origin_bev.png" class="img-fluid mb-2" alt="Origin BEV - Add Other Vehicle">
-            <img src="images/aa_tool_experiments/add_other_vehicle/impact_bev.png" class="img-fluid" alt="Impact BEV - Add Other Vehicle">
+      <div class="api-card card shadow-sm rounded border-light">
+        <div class="card-body text-center">
+          <h5 class="card-title">Impact Stop Sign Distance</h5>
+    
+          <div class="api-image-container" onclick="toggleApiImage(this)">
+            <img class="api-img img-front" src="images/aa_tool_experiments/impact_stop_sign_distance/origin_bev.png" alt="Origin BEV">
+            <img class="api-img img-back" src="images/aa_tool_experiments/impact_stop_sign_distance/impact_bev.png" alt="Impact BEV">
           </div>
+    
+          <p class="api-caption mt-2"><strong>Origin</strong> BEV</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Impact Stop Sign Size -->
+    <div class="col">
+      <div class="api-card card shadow-sm rounded border-light">
+        <div class="card-body text-center">
+          <h5 class="card-title">Impact Stop Sign Size</h5>
+    
+          <div class="api-image-container" onclick="toggleApiImage(this)">
+            <img class="api-img img-front" src="images/aa_tool_experiments/impact_stop_sign_size/origin_bev.png" alt="Origin BEV">
+            <img class="api-img img-back" src="images/aa_tool_experiments/impact_stop_sign_size/impact_bev.png" alt="Impact BEV">
+          </div>
+    
+          <p class="api-caption mt-2"><strong>Origin</strong> BEV</p>
         </div>
       </div>
     </div>
 
-    <!-- add_stop_sign -->
+    <!-- Add Stop Sign -->
     <div class="col">
-      <div class="card shadow-sm rounded border-light">
-        <div class="card-body">
-          <h5 class="card-title text-center">Add Stop Sign</h5>
-          <div class="image-grid">
-            <img src="images/aa_tool_experiments/add_stop_sign/origin_bev.png" class="img-fluid mb-2" alt="Origin BEV - Add Stop Sign">
-            <img src="images/aa_tool_experiments/add_stop_sign/impact_bev.png" class="img-fluid" alt="Impact BEV - Add Stop Sign">
+      <div class="api-card card shadow-sm rounded border-light">
+        <div class="card-body text-center">
+          <h5 class="card-title">Add Stop Sign</h5>
+    
+          <div class="api-image-container" onclick="toggleApiImage(this)">
+            <!-- Layer 1: Origin BEV -->
+            <img class="api-img img-front" src="images/aa_tool_experiments/add_stop_sign/origin_bev.png" alt="Origin BEV">
+            <!-- Layer 2: Impact BEV with slight opacity for partial visibility -->
+            <img class="api-img img-back" src="images/aa_tool_experiments/add_stop_sign/impact_bev.png" alt="Impact BEV">
           </div>
+    
+          <p class="api-caption mt-2"><strong>Origin</strong> BEV</p>
         </div>
       </div>
     </div>
 
-    <!-- add_traffic_light -->
+    <!-- About traffic light -->
+
+    <!-- Impact Traffic Light Distance -->
     <div class="col">
-      <div class="card shadow-sm rounded border-light">
-        <div class="card-body">
-          <h5 class="card-title text-center">Add Traffic Light</h5>
-          <div class="image-grid">
-            <img src="images/aa_tool_experiments/add_traffic_light/origin_bev.png" class="img-fluid mb-2" alt="Origin BEV - Add Traffic Light">
-            <img src="images/aa_tool_experiments/add_traffic_light/impact_bev.png" class="img-fluid" alt="Impact BEV - Add Traffic Light">
+      <div class="api-card card shadow-sm rounded border-light">
+        <div class="card-body text-center">
+          <h5 class="card-title">Impact Traffic Light Distance</h5>
+          <div class="api-image-container" onclick="toggleApiImage(this)">
+            <img class="api-img img-front" src="images/aa_tool_experiments/impact_traffic_light_distance/origin_bev.png" alt="Origin BEV">
+            <img class="api-img img-back" src="images/aa_tool_experiments/impact_traffic_light_distance/impact_bev.png" alt="Impact BEV">
           </div>
+          <p class="api-caption mt-2"><strong>Origin</strong> BEV</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Impact Traffic Light Size -->
+    <div class="col">
+      <div class="api-card card shadow-sm rounded border-light">
+        <div class="card-body text-center">
+          <h5 class="card-title">Impact Traffic Light Size</h5>
+          <div class="api-image-container" onclick="toggleApiImage(this)">
+            <img class="api-img img-front" src="images/aa_tool_experiments/impact_traffic_light_size/origin_bev.png" alt="Origin BEV">
+            <img class="api-img img-back" src="images/aa_tool_experiments/impact_traffic_light_size/impact_bev.png" alt="Impact BEV">
+          </div>
+          <p class="api-caption mt-2"><strong>Origin</strong> BEV</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Impact Traffic Light Status -->
+    <div class="col">
+      <div class="api-card card shadow-sm rounded border-light">
+        <div class="card-body text-center">
+          <h5 class="card-title">Impact Traffic Light Status</h5>
+          <div class="api-image-container" onclick="toggleApiImage(this)">
+            <img class="api-img img-front" src="images/aa_tool_experiments/impact_traffic_light_status/origin_bev.png" alt="Origin BEV">
+            <img class="api-img img-back" src="images/aa_tool_experiments/impact_traffic_light_status/impact_bev.png" alt="Impact BEV">
+          </div>
+          <p class="api-caption mt-2"><strong>Origin</strong> BEV</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Add Traffic Light -->
+    <div class="col">
+      <div class="api-card card shadow-sm rounded border-light">
+        <div class="card-body text-center">
+          <h5 class="card-title">Add Traffic Light</h5>
+          <div class="api-image-container" onclick="toggleApiImage(this)">
+            <img class="api-img img-front" src="images/aa_tool_experiments/add_traffic_light/origin_bev.png" alt="Origin BEV">
+            <img class="api-img img-back" src="images/aa_tool_experiments/add_traffic_light/impact_bev.png" alt="Impact BEV">
+          </div>
+          <p class="api-caption mt-2"><strong>Origin</strong> BEV</p>
         </div>
       </div>
     </div>
 
-    <!-- impact_other_vehicle_distance -->
+    <!-- About Road -->
+    <!-- Impact Road Heading -->
     <div class="col">
-      <div class="card shadow-sm rounded border-light">
-        <div class="card-body">
-          <h5 class="card-title text-center">Impact Other Vehicle Distance</h5>
-          <div class="image-grid">
-            <img src="images/aa_tool_experiments/impact_other_vehicle_distance/origin_bev.png" class="img-fluid mb-2" alt="Origin BEV - Other Vehicle Distance">
-            <img src="images/aa_tool_experiments/impact_other_vehicle_distance/impact_bev.png" class="img-fluid" alt="Impact BEV - Other Vehicle Distance">
+      <div class="api-card card shadow-sm rounded border-light">
+        <div class="card-body text-center">
+          <h5 class="card-title">Impact Road Heading</h5>
+          <div class="api-image-container" onclick="toggleApiImage(this)">
+            <img class="api-img img-front" src="images/aa_tool_experiments/impact_road_heading/origin_bev.png" alt="Origin BEV">
+            <img class="api-img img-back" src="images/aa_tool_experiments/impact_road_heading/impact_bev.png" alt="Impact BEV">
           </div>
+          <p class="api-caption mt-2"><strong>Origin</strong> BEV</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Impact Road Lane Width -->
+    <div class="col">
+      <div class="api-card card shadow-sm rounded border-light">
+        <div class="card-body text-center">
+          <h5 class="card-title">Impact Road Lane Width</h5>
+          <div class="api-image-container" onclick="toggleApiImage(this)">
+            <img class="api-img img-front" src="images/aa_tool_experiments/impact_road_lane_width/origin_bev.png" alt="Origin BEV">
+            <img class="api-img img-back" src="images/aa_tool_experiments/impact_road_lane_width/impact_bev.png" alt="Impact BEV">
+          </div>
+          <p class="api-caption mt-2"><strong>Origin</strong> BEV</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Impact Road Shape to Curve -->
+    <div class="col">
+      <div class="api-card card shadow-sm rounded border-light">
+        <div class="card-body text-center">
+          <h5 class="card-title">Impact Road Shape to Curve</h5>
+          <div class="api-image-container" onclick="toggleApiImage(this)">
+            <img class="api-img img-front" src="images/aa_tool_experiments/impact_road_shape_to_curve/origin_bev.png" alt="Origin BEV">
+            <img class="api-img img-back" src="images/aa_tool_experiments/impact_road_shape_to_curve/impact_bev.png" alt="Impact BEV">
+          </div>
+          <p class="api-caption mt-2"><strong>Origin</strong> BEV</p>
         </div>
       </div>
     </div>
 
-    <!-- impact_other_vehicle_heading -->
+    <!-- About Lane -->
+    <!-- Remove Lanes -->
     <div class="col">
-      <div class="card shadow-sm rounded border-light">
-        <div class="card-body">
-          <h5 class="card-title text-center">Impact Other Vehicle Heading</h5>
-          <div class="image-grid">
-            <img src="images/aa_tool_experiments/impact_other_vehicle_heading/origin_bev.png" class="img-fluid mb-2" alt="Origin BEV - Other Vehicle Heading">
-            <img src="images/aa_tool_experiments/impact_other_vehicle_heading/impact_bev.png" class="img-fluid" alt="Impact BEV - Other Vehicle Heading">
+      <div class="api-card card shadow-sm rounded border-light">
+        <div class="card-body text-center">
+          <h5 class="card-title">Remove Lanes</h5>
+          <div class="api-image-container" onclick="toggleApiImage(this)">
+            <img class="api-img img-front" src="images/aa_tool_experiments/remove_lanes/origin_bev.png" alt="Origin BEV">
+            <img class="api-img img-back" src="images/aa_tool_experiments/remove_lanes/impact_bev.png" alt="Impact BEV">
           </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- impact_other_vehicle_size -->
-    <div class="col">
-      <div class="card shadow-sm rounded border-light">
-        <div class="card-body">
-          <h5 class="card-title text-center">Impact Other Vehicle Size</h5>
-          <div class="image-grid">
-            <img src="images/aa_tool_experiments/impact_other_vehicle_size/origin_bev.png" class="img-fluid mb-2" alt="Origin BEV - Other Vehicle Size">
-            <img src="images/aa_tool_experiments/impact_other_vehicle_size/impact_bev.png" class="img-fluid" alt="Impact BEV - Other Vehicle Size">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- impact_other_vehicle_speed -->
-    <div class="col">
-      <div class="card shadow-sm rounded border-light">
-        <div class="card-body">
-          <h5 class="card-title text-center">Impact Other Vehicle Speed</h5>
-          <div class="image-grid">
-            <img src="images/aa_tool_experiments/impact_other_vehicle_speed/origin_bev.png" class="img-fluid mb-2" alt="Origin BEV - Other Vehicle Speed">
-            <img src="images/aa_tool_experiments/impact_other_vehicle_speed/impact_bev.png" class="img-fluid" alt="Impact BEV - Other Vehicle Speed">
-          </div>
+          <p class="api-caption mt-2"><strong>Origin</strong> BEV</p>
         </div>
       </div>
     </div>
@@ -727,159 +1036,6 @@
   </div>
 </section>
 
-
-
-   <!-- API Effects -->
-<section id="apis">
-  <h2 class="section-title">Last API Behavior Modifications</h2>
-  <div class="row">
-
-    <!-- add_other_vehicle -->
-    <div class="col-md-12 highlight">
-      <h5>Add Other Vehicle</h5>
-      <div class="image-grid">
-        <img src="images/aa_tool_experiments/add_other_vehicle/origin_bev.png" class="img-fluid" alt="Origin BEV - Add Other Vehicle">
-        <img src="images/aa_tool_experiments/add_other_vehicle/impact_bev.png" class="img-fluid" alt="Impact BEV - Add Other Vehicle">
-      </div>
-    </div>
-
-    <!-- add_stop_sign -->
-    <div class="col-md-12 highlight">
-      <h5>Add Stop Sign</h5>
-      <div class="image-grid">
-        <img src="images/aa_tool_experiments/add_stop_sign/origin_bev.png" class="img-fluid" alt="Origin BEV - Add Stop Sign">
-        <img src="images/aa_tool_experiments/add_stop_sign/impact_bev.png" class="img-fluid" alt="Impact BEV - Add Stop Sign">
-      </div>
-    </div>
-
-    <!-- add_traffic_light -->
-    <div class="col-md-12 highlight">
-      <h5>Add Traffic Light</h5>
-      <div class="image-grid">
-        <img src="images/aa_tool_experiments/add_traffic_light/origin_bev.png" class="img-fluid" alt="Origin BEV - Add Traffic Light">
-        <img src="images/aa_tool_experiments/add_traffic_light/impact_bev.png" class="img-fluid" alt="Impact BEV - Add Traffic Light">
-      </div>
-    </div>
-
-    <!-- impact_other_vehicle_distance -->
-    <div class="col-md-12 highlight">
-      <h5>Impact Other Vehicle Distance</h5>
-      <div class="image-grid">
-        <img src="images/aa_tool_experiments/impact_other_vehicle_distance/origin_bev.png" class="img-fluid" alt="Origin BEV - Other Vehicle Distance">
-        <img src="images/aa_tool_experiments/impact_other_vehicle_distance/impact_bev.png" class="img-fluid" alt="Impact BEV - Other Vehicle Distance">
-      </div>
-    </div>
-
-    <!-- impact_other_vehicle_heading -->
-    <div class="col-md-12 highlight">
-      <h5>Impact Other Vehicle Heading</h5>
-      <div class="image-grid">
-        <img src="images/aa_tool_experiments/impact_other_vehicle_heading/origin_bev.png" class="img-fluid" alt="Origin BEV - Other Vehicle Heading">
-        <img src="images/aa_tool_experiments/impact_other_vehicle_heading/impact_bev.png" class="img-fluid" alt="Impact BEV - Other Vehicle Heading">
-      </div>
-    </div>
-
-    <!-- impact_other_vehicle_size -->
-    <div class="col-md-12 highlight">
-      <h5>Impact Other Vehicle Size</h5>
-      <div class="image-grid">
-        <img src="images/aa_tool_experiments/impact_other_vehicle_size/origin_bev.png" class="img-fluid" alt="Origin BEV - Other Vehicle Size">
-        <img src="images/aa_tool_experiments/impact_other_vehicle_size/impact_bev.png" class="img-fluid" alt="Impact BEV - Other Vehicle Size">
-      </div>
-    </div>
-
-    <!-- impact_other_vehicle_speed -->
-    <div class="col-md-12 highlight">
-      <h5>Impact Other Vehicle Speed</h5>
-      <div class="image-grid">
-        <img src="images/aa_tool_experiments/impact_other_vehicle_speed/origin_bev.png" class="img-fluid" alt="Origin BEV - Other Vehicle Speed">
-        <img src="images/aa_tool_experiments/impact_other_vehicle_speed/impact_bev.png" class="img-fluid" alt="Impact BEV - Other Vehicle Speed">
-      </div>
-    </div>
-
-    <!-- impact_road_heading -->
-    <div class="col-md-12 highlight">
-      <h5>Impact Road Heading</h5>
-      <div class="image-grid">
-        <img src="images/aa_tool_experiments/impact_road_heading/origin_bev.png" class="img-fluid" alt="Origin BEV - Road Heading">
-        <img src="images/aa_tool_experiments/impact_road_heading/impact_bev.png" class="img-fluid" alt="Impact BEV - Road Heading">
-      </div>
-    </div>
-
-    <!-- impact_road_lane_width -->
-    <div class="col-md-12 highlight">
-      <h5>Impact Road Lane Width</h5>
-      <div class="image-grid">
-        <img src="images/aa_tool_experiments/impact_road_lane_width/origin_bev.png" class="img-fluid" alt="Origin BEV - Road Lane Width">
-        <img src="images/aa_tool_experiments/impact_road_lane_width/impact_bev.png" class="img-fluid" alt="Impact BEV - Road Lane Width">
-      </div>
-    </div>
-
-    <!-- impact_road_shape_to_curve -->
-    <div class="col-md-12 highlight">
-      <h5>Impact Road Shape to Curve</h5>
-      <div class="image-grid">
-        <img src="images/aa_tool_experiments/impact_road_shape_to_curve/origin_bev.png" class="img-fluid" alt="Origin BEV - Road Curve">
-        <img src="images/aa_tool_experiments/impact_road_shape_to_curve/impact_bev.png" class="img-fluid" alt="Impact BEV - Road Curve">
-      </div>
-    </div>
-
-    <!-- impact_stop_sign_distance -->
-    <div class="col-md-12 highlight">
-      <h5>Impact Stop Sign Distance</h5>
-      <div class="image-grid">
-        <img src="images/aa_tool_experiments/impact_stop_sign_distance/origin_bev.png" class="img-fluid" alt="Origin BEV - Stop Sign Distance">
-        <img src="images/aa_tool_experiments/impact_stop_sign_distance/impact_bev.png" class="img-fluid" alt="Impact BEV - Stop Sign Distance">
-      </div>
-    </div>
-
-    <!-- impact_stop_sign_size -->
-    <div class="col-md-12 highlight">
-      <h5>Impact Stop Sign Size</h5>
-      <div class="image-grid">
-        <img src="images/aa_tool_experiments/impact_stop_sign_size/origin_bev.png" class="img-fluid" alt="Origin BEV - Stop Sign Size">
-        <img src="images/aa_tool_experiments/impact_stop_sign_size/impact_bev.png" class="img-fluid" alt="Impact BEV - Stop Sign Size">
-      </div>
-    </div>
-
-    <!-- impact_traffic_light_distance -->
-    <div class="col-md-12 highlight">
-      <h5>Impact Traffic Light Distance</h5>
-      <div class="image-grid">
-        <img src="images/aa_tool_experiments/impact_traffic_light_distance/origin_bev.png" class="img-fluid" alt="Origin BEV - Traffic Light Distance">
-        <img src="images/aa_tool_experiments/impact_traffic_light_distance/impact_bev.png" class="img-fluid" alt="Impact BEV - Traffic Light Distance">
-      </div>
-    </div>
-
-    <!-- impact_traffic_light_size -->
-    <div class="col-md-12 highlight">
-      <h5>Impact Traffic Light Size</h5>
-      <div class="image-grid">
-        <img src="images/aa_tool_experiments/impact_traffic_light_size/origin_bev.png" class="img-fluid" alt="Origin BEV - Traffic Light Size">
-        <img src="images/aa_tool_experiments/impact_traffic_light_size/impact_bev.png" class="img-fluid" alt="Impact BEV - Traffic Light Size">
-      </div>
-    </div>
-
-    <!-- impact_traffic_light_status -->
-    <div class="col-md-12 highlight">
-      <h5>Impact Traffic Light Status</h5>
-      <div class="image-grid">
-        <img src="images/aa_tool_experiments/impact_traffic_light_status/origin_bev.png" class="img-fluid" alt="Origin BEV - Traffic Light Status">
-        <img src="images/aa_tool_experiments/impact_traffic_light_status/impact_bev.png" class="img-fluid" alt="Impact BEV - Traffic Light Status">
-      </div>
-    </div>
-
-    <!-- remove_lanes -->
-    <div class="col-md-12 highlight">
-      <h5>Remove Lanes</h5>
-      <div class="image-grid">
-        <img src="images/aa_tool_experiments/remove_lanes/origin_bev.png" class="img-fluid" alt="Origin BEV - Remove Lanes">
-        <img src="images/aa_tool_experiments/remove_lanes/impact_bev.png" class="img-fluid" alt="Impact BEV - Remove Lanes">
-      </div>
-    </div>
-
-  </div>
-</section>
   
   <footer class="mt-5">
     <p>© 2025 X-DriverSim Project | Paper: Coming Soon | GitHub Repo</p>
