@@ -227,8 +227,8 @@
     
     .api-img {
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 50%;
+      left: 50%;
       width: 70%; /* 控制图片的宽度，这里设置为 90% */
       height: 70%; /* 控制图片的高度，这里设置为 90% */
       border-radius: 8px;
@@ -268,11 +268,12 @@
       height: 200px; /* 🔹 添加这一行设定固定高度 */
     }
 
-    .api-card .card-body {
+    .api-card .card-title {
 /*       font-family: "Segoe UI", sans-serif; /* 自定义字体族 */ */
-      font-size: 0.95rem;                  /* 字体大小（可选） */
-      font-weight: 400;                    /* 字重（可选） */
+      font-size: 0.9rem;                  /* 字体大小（可选） */
+/*       font-weight: 400;                    /* 字重（可选） */ */
       color: #333;                         /* 字体颜色（可选） */
+      margin-bottom: 0.5rem;
     }
 
 
@@ -595,29 +596,10 @@
 
   <!-- Ablation Visualization -->
   <div class="row justify-content-center">
-    <div class="col-md-4 mb-3">
-      <div class="card shadow-sm">
-        <img src="images/ablation_full_model.png" class="card-img-top" alt="Full Model Behavior">
-        <div class="card-body text-center">
-          <p class="card-text">Full model produces smooth and responsive driving.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 mb-3">
-      <div class="card shadow-sm">
-        <img src="images/ablation_no_adapter.png" class="card-img-top" alt="No Adapter Behavior">
-        <div class="card-body text-center">
-          <p class="card-text">Without scene adapter, response becomes delayed.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 mb-3">
-      <div class="card shadow-sm">
-        <img src="images/ablation_no_llm.png" class="card-img-top" alt="No LLM Behavior">
-        <div class="card-body text-center">
-          <p class="card-text">Without LLM, behavior lacks goal alignment.</p>
-        </div>
-      </div>
+    <div class="text-center mb-4">
+      <h5><strong>Framework Overview</strong></h5>
+      <img src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/Trajectory_validation.png" alt="Framework Overview" class="img-fluid rounded shadow-sm" style="max-width: 100%; height: auto;">
+      <p class="text-muted mt-2">Figure 1. X-DriverSim closed-loop simulation framework with LLM-driven behavior control and multimodal inputs.</p>
     </div>
   </div>
 </section>
