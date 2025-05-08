@@ -239,8 +239,8 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%); /* ✅ 真正居中 */
-      width: 80%; /* 控制图片的宽度，这里设置为 90% */
-      height: 80%; /* 控制图片的高度，这里设置为 90% */
+      width: 90%; /* 控制图片的宽度，这里设置为 90% */
+      height: 90%; /* 控制图片的高度，这里设置为 90% */
       object-fit: contain;
       border-radius: 8px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -281,22 +281,47 @@
     }
 
     .api-card .card-title {
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       font-weight: 600;
       text-align: center;
       color: #333;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
 
     .api-card-title {
-      font-size: 0.9rem;
+      font-size: 1rem;
       font-weight: 600;
       text-align: center;
       color: #333;
       margin-bottom: 0.5rem;
     }
 
+        /* 大卡片的标题 */
+    .section-title {
+      margin-top: 40px;
+      text-align: center;
+    }
 
+    /* 分隔线样式 */
+    hr {
+      border: 1px solid #ccc;
+      margin: 20px 0;
+    }
+
+    /* 大卡片容器样式 */
+    .api-card-container {
+      margin-bottom: 40px;
+    }
+
+    /* Stop Sign 部分的卡片样式 */
+    .stop-sign-card {
+      background-color: #f8d7da; /* Light Red */
+    }
+
+    /* Traffic Light 部分的卡片样式 */
+    .traffic-light-card {
+      background-color: #d1ecf1; /* Light Blue */
+    }
 
     
   </style>
@@ -525,7 +550,7 @@
     Traffic Style(TS), Driving Score(DS, Interfuser as AD Tested Model), Route Completion(RC). </p>
   
   <div class="table-responsive">
-    <table class="table table-bordered table-hover text-center"  style="width: 80%; max-width: 1000px;">
+    <table class="table table-bordered table-hover text-center"  style="margin: 0 auto; width: 85%; max-width: 1000px;">
       <thead class="table-light">
         <tr>
           <th>TS</th>
@@ -632,7 +657,7 @@
 
   <!-- Ablation Table -->
   <div class="table-responsive mb-4">
-    <table class="table table-bordered table-hover text-center">
+    <table class="table table-bordered table-hover text-center" style="margin: 0 auto; width: 85%; max-width: 1000px;">
       <thead class="table-light">
         <tr>
           <th>TS</th>
@@ -791,9 +816,19 @@
 
 
     <!-- About stop sign -->
+    <div class="container">
+      <!-- Stop Sign Section -->
+      <div class="section-title">
+        <hr>
+        <h3>Stop Sign API</h3>
+        <hr>
+    </div>
+
+    <!-- 大卡片容器 -->
+    <div class="api-card-container row">
     <!-- Impact Stop Sign Distance -->
     <div class="col">
-      <div class="api-card card shadow-sm rounded border-light">
+      <div class="api-card card shadow-sm rounded border-light stop-sign-card">
         <div class="card-body text-center">
           <div class="api-card-title">Impact Stop Sign Distance</h5>
     
@@ -809,7 +844,7 @@
     
     <!-- Impact Stop Sign Size -->
     <div class="col">
-      <div class="api-card card shadow-sm rounded border-light">
+      <div class="api-card card shadow-sm rounded border-light stop-sign-card">
         <div class="card-body text-center">
           <div class="api-card-title">Impact Stop Sign Size</h5>
     
@@ -825,7 +860,7 @@
 
     <!-- Add Stop Sign -->
     <div class="col">
-      <div class="api-card card shadow-sm rounded border-light">
+      <div class="api-card card shadow-sm rounded border-light stop-sign-card">
         <div class="card-body text-center">
           <div class="api-card-title">Add Stop Sign</h5>
     
@@ -840,12 +875,21 @@
         </div>
       </div>
     </div>
+  </div>
 
+      
     <!-- About traffic light -->
+    <div class="section-title">
+      <hr>
+      <h3>Traffic Light API</h3>
+      <hr>
+    </div>
 
+    <!-- 大卡片容器 -->
+    <div class="api-card-container row">
     <!-- Impact Traffic Light Distance -->
     <div class="col">
-      <div class="api-card card shadow-sm rounded border-light">
+      <div class="api-card card shadow-sm rounded border-light traffic-light-card">
         <div class="card-body text-center">
           <div class="api-card-title">Impact Traffic Light Distance</h5>
           <div class="api-image-container" onclick="toggleApiImage(this)">
@@ -859,7 +903,7 @@
     
     <!-- Impact Traffic Light Size -->
     <div class="col">
-      <div class="api-card card shadow-sm rounded border-light">
+      <div class="api-card card shadow-sm rounded border-light traffic-light-card">
         <div class="card-body text-center">
           <div class="api-card-title">Impact Traffic Light Size</h5>
           <div class="api-image-container" onclick="toggleApiImage(this)">
@@ -873,7 +917,7 @@
     
     <!-- Impact Traffic Light Status -->
     <div class="col">
-      <div class="api-card card shadow-sm rounded border-light">
+      <div class="api-card card shadow-sm rounded border-light traffic-light-card">
         <div class="card-body text-center">
           <div class="api-card-title">Impact Traffic Light Status</h5>
           <div class="api-image-container" onclick="toggleApiImage(this)">
@@ -887,7 +931,7 @@
     
     <!-- Add Traffic Light -->
     <div class="col">
-      <div class="api-card card shadow-sm rounded border-light">
+      <div class="api-card card shadow-sm rounded border-light traffic-light-card">
         <div class="card-body text-center">
           <div class="api-card-title">Add Traffic Light</h5>
           <div class="api-image-container" onclick="toggleApiImage(this)">
@@ -898,6 +942,7 @@
         </div>
       </div>
     </div>
+  </div>
 
     <!-- About Road -->
     <!-- Impact Road Heading -->
