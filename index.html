@@ -230,6 +230,7 @@
       height: auto; /* 根据宽度自动调整高度 */
       aspect-ratio: 16 / 9;
       cursor: pointer;
+      margin: 0 auto; /* 居中容器 */
     }
 
     
@@ -250,17 +251,19 @@
     .img-front {
       z-index: 2; /* Ensure it is on top */
       opacity: 1;
-      top: 5px;  /* Slight shift down */
-      left: 8px; /* Slight shift right */
+      transform: translate(-50%, -50%) translate(10px, 10px); /* Slight shift right and down */
+/*       top: 5px;  /* Slight shift down */ */
+/*       left: 8px; /* Slight shift right */ */
     }
     
     /* Layer 2 (Impact BEV) with slight opacity */
     .img-back {
       z-index: 1;
       opacity: 0.2;
+      transform: translate(-50%, -50%) translate(-10px, -10px); /* Slight shift left and up */
       /* Slight shift down and to the right for the second layer */
-      top: -5px;  /* Move up slightly */
-      left: -8px; /* Move left slightly */
+/*       top: -5px;  /* Move up slightly */ */
+/*       left: -8px; /* Move left slightly */ */
     }
     
     .api-image-container:hover .img-front {
@@ -273,16 +276,16 @@
 
     .api-card {
       width: 80%; /* Reduced card width for smaller cards */
-      max-width: 200px; /* 控制卡片最大宽度 */
+      max-width: 250px; /* 控制卡片最大宽度 */
       margin: 0 auto;    /* 居中卡片 */
-      height: 200px; /* 🔹 添加这一行设定固定高度 */
+/*       height: 200px; /* 🔹 添加这一行设定固定高度 */ */
     }
 
     .api-card .card-title {
-/*       font-family: "Segoe UI", sans-serif; /* 自定义字体族 */ */
-      font-size: 0.8rem;                  /* 字体大小（可选） */
-/*       font-weight: 400;                    /* 字重（可选） */ */
-      color: #333;                         /* 字体颜色（可选） */
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-align: center;
+      color: #333;
       margin-bottom: 0.5rem;
     }
 
@@ -368,7 +371,7 @@
     <!-- Framework Figure -->
     <div class="text-center mb-4">
       <h5><strong>Framework Overview</strong></h5>
-      <img src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/framework_fig.png" alt="Framework Overview" class="img-fluid rounded shadow-sm" style="max-width: 100%; height: auto;">
+      <img src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/framework_fig.png" alt="Framework Overview" class="img-fluid rounded shadow-sm" style="max-width: 80%; height: auto;">
       <p class="text-muted mt-2">Figure 1. X-DriverSim closed-loop simulation framework with LLM-driven behavior control and multimodal inputs.</p>
     </div>
 
@@ -519,17 +522,18 @@
 <!-- Quantitative Results -->
 <section id="quant-results" class="my-5" data-aos="fade-up">
   <h2 class="section-title text-center">Quantitative Results</h2>
-  <p class="text-center">We present the numerical evaluation of different driver behavior models across standard metrics.</p>
+  <p class="text-center">We present the numerical evaluation of different driver behavior models across standard metrics. 
+    Traffic Style(TS), Driving Score(DS, Interfuser as AD Tested Model), Route Completion(RC), Tested AD Model(TAD)</p>
   
   <div class="table-responsive">
     <table class="table table-bordered table-hover text-center">
       <thead class="table-light">
         <tr>
           <th>Traffic Style(TS)</th>
-          <th>Driving Score(DS, Interfuser as AD Tested Model)</th>
-          <th>Route Completion(RC)</th>
+          <th>DS (Interfuser as Tested AD Model)</th>
+          <th>RC</th>
           <th>TS</th>
-          <th>DS</th>
+          <th>DS (Interfuser as Tested AD Model)</th>
           <th>RC</th>
         </tr>
       </thead>
@@ -559,48 +563,6 @@
           <td>Distracted</td>
           <td>64.6</td>
           <td>100.0</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <table class="table table-bordered table-hover text-center">
-      <thead class="table-light">
-        <tr>
-          <th>Traffic Style(TS)</th>
-          <th>Driving Score(DS, Interfuser as Tested AD Model)</th>
-          <th>Route Completion(RC)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Normal</td>
-          <td>88.7</td>
-          <td>100.0</td>
-        </tr>
-        <tr>
-          <td>Aggressive</td>
-          <td>45.5</td>
-          <td>100.0</td>
-        </tr>
-        <tr>
-          <td>Cautious</td>
-          <td>78.1</td>
-          <td>100.0</td>
-        </tr>
-        <tr>
-          <td>Fatigue</td>
-          <td>61.9</td>
-          <td>100.0</td>
-        </tr>
-        <tr>          
-          <td>Distracted</td>
-          <td>64.6</td>
-          <td>100.0</td>
-        </tr>
-        <tr>        
-          <td>Drunk</td>
-          <td>47.7</td>
-          <td>61.2</td>
         </tr>
       </tbody>
     </table>
@@ -661,8 +623,6 @@
       </tbody>
     </table>
 
-
-
   </div>
 </section>
 
@@ -676,36 +636,43 @@
     <table class="table table-bordered table-hover text-center">
       <thead class="table-light">
         <tr>
-          <th>Style Comb.</th>
+          <th>TS</th>
+          <th>Tested AD Model</th>
           <th>DS</th>
           <th>RC</th>
-          <th>Style Comb.</th>
+          <th>Tested AD Model</th>
           <th>DS</th>
           <th>RC</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>No-Expert</td>
+          <td>Normal</td>
+          <td>Normal Roach Expert</td>
           <td>91.2</td>
           <td>100</td>
-          <td>Dr-Expert</td>
+          
+          <td>Aggressive Roach Expert</td>
+          <td>79.2</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>Normal</td>
+          <td>Cautious Roach Expert</td>
+          <td>88.0</td>
+          <td>100</td>
+
+          <td>Drunk Roach Expert</td>
           <td>78.6</td>
           <td>100</td>
         </tr>
         <tr>
-          <td>Ag-Expert</td>
-          <td>79.2</td>
-          <td>100</td>
-          <td>Fa-Expert</td>
+          <td>Normal</td>
+          <td>Fatigure Roach Expert</td>
           <td>82.4</td>
           <td>100</td>
-        </tr>
-        <tr>
-          <td>Ca-Expert</td>
-          <td>88.0</td>
-          <td>100</td>
-          <td>Di-Expert</td>
+          
+          <td>Distracted Roach Expert</td>
           <td>84.2</td>
           <td>100</td>
         </tr>
@@ -722,7 +689,7 @@
         src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/Trajectory_validation.png" 
         alt="Framework Overview" 
         class="img-fluid rounded shadow-sm" 
-        style="max-width: 90%; height: auto;"> <!-- 👈 控制实际显示宽度 -->
+        style="max-width: 100%; height: auto;"> <!-- 👈 控制实际显示宽度 -->
       <p class="text-muted mt-2">
         Figure 1. X-DriverSim closed-loop simulation framework with LLM-driven behavior control and multimodal inputs.
       </p>
