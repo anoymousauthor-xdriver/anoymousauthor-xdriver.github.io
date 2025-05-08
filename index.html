@@ -730,241 +730,177 @@
   </div>
 
 </section>
-
-
-  <!-- API Effects -->
   
 <!-- API Effects -->
 <section id="apis" class="my-5">
   <h2 class="section-title text-center mb-4">New API Behavior Modifications</h2>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <!-- 大卡片容器 -->
-          <hr>
-          <div class="card shadow-sm rounded p-4 mb-5 mx-auto" style="width: 100%; max-width: 1200px;">
-            <h5 class="mb-4 fw-semibold">Other Vehicle API</h5>
-          
-            <!-- 使用 d-flex 横向排列子卡片 -->
-<!--             <div class="api-section-container d-flex justify-content-around flex-wrap gap-4"> -->
-            <div class="api-section-container d-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem;">
-              
-              <!-- Impact Other Vehicle Distance -->
-              <div class="api-card card shadow-sm text-center p-3">
-                <h6>Impact Other Vehicle Distance</h6>
-                <div class="api-image-container" onclick="toggleApiImage(this)">
-                  <img class="api-img img-front" src="images/aa_tool_experiments/impact_other_vehicle_distance/origin_bev.png" alt="Origin BEV">
-                  <img class="api-img img-back" src="images/aa_tool_experiments/impact_other_vehicle_distance/impact_bev.png" alt="Impact BEV">
-                </div>
-                <p class="api-caption"><strong>Origin</strong> BEV</p>
-              </div>
-          
-              <!-- Impact Other Vehicle Heading -->
-              <div class="api-card card shadow-sm text-center p-3">
-                <h6>Impact Other Vehicle Heading</h6>
-                <div class="api-image-container" onclick="toggleApiImage(this)">
-                  <img class="api-img img-front" src="images/aa_tool_experiments/impact_other_vehicle_heading/origin_bev.png" alt="Origin BEV">
-                  <img class="api-img img-back" src="images/aa_tool_experiments/impact_other_vehicle_heading/impact_bev.png" alt="Impact BEV">
-                </div>
-                <p class="api-caption"><strong>Origin</strong> BEV</p>
-              </div>
-          
-              <!-- Impact Other Vehicle Size -->
-              <div class="api-card card shadow-sm text-center p-3">
-                <h6>Impact Other Vehicle Size</h6>
-                <div class="api-image-container" onclick="toggleApiImage(this)">
-                  <img class="api-img img-front" src="images/aa_tool_experiments/impact_other_vehicle_size/origin_bev.png" alt="Origin BEV">
-                  <img class="api-img img-back" src="images/aa_tool_experiments/impact_other_vehicle_size/impact_bev.png" alt="Impact BEV">
-                </div>
-                <p class="api-caption"><strong>Origin</strong> BEV</p>
-              </div>
-          
-              <!-- Impact Other Vehicle Speed -->
-              <div class="api-card card shadow-sm text-center p-3">
-                <h6>Impact Other Vehicle Speed</h6>
-                <div class="api-image-container" onclick="toggleApiImage(this)">
-                  <img class="api-img img-front" src="images/aa_tool_experiments/impact_other_vehicle_speed/origin_bev.png" alt="Origin BEV">
-                  <img class="api-img img-back" src="images/aa_tool_experiments/impact_other_vehicle_speed/impact_bev.png" alt="Impact BEV">
-                </div>
-                <p class="api-caption"><strong>Origin</strong> BEV</p>
-              </div>
-          
-              <!-- Add Other Vehicle -->
-              <div class="api-card card shadow-sm text-center p-3">
-                <h6>Add Other Vehicle</h6>
-                <div class="api-image-container" onclick="toggleApiImage(this)">
-                  <img class="api-img img-front" src="images/aa_tool_experiments/add_other_vehicle/origin_bev.png" alt="Origin BEV">
-                  <img class="api-img img-back" src="images/aa_tool_experiments/add_other_vehicle/impact_bev.png" alt="Impact BEV">
-                </div>
-                <p class="api-caption"><strong>Origin</strong> BEV</p>
-              </div>
-          
-            </div>
-          </div>
-        
-          <!-- 大卡片容器 -->
-          <hr>
-          <div class="card shadow-sm rounded p-4 mb-5 mx-auto" style="width: 100%; max-width: 1200px;">
-            <h5 class="mb-4 fw-semibold">Stop Sign API</h5>
-      
-            <!-- 使用 d-flex 横向排列子卡片 -->
-            <div class="api-section-container">
-            
-              <!-- Impact Stop Sign Distance -->
-              <div class="api-card card shadow-sm text-center p-3">
-                  <h6>Impact Stop Sign Distance</h6>
-                  <div class="api-image-container" onclick="toggleApiImage(this)">
-                    <img class="api-img img-front" src="images/aa_tool_experiments/impact_stop_sign_distance/origin_bev.png" alt="Origin BEV">
-                    <img class="api-img img-back" src="images/aa_tool_experiments/impact_stop_sign_distance/impact_bev.png" alt="Impact BEV">
-                  </div>
-                  <p class="api-caption"><strong>Origin</strong> BEV</p>
-              </div>
-          
-              <!-- Impact Stop Sign Size -->
-              <div class="api-card card shadow-sm text-center p-3">
-                  <h6>Impact Stop Sign Size</h6>
-                  <div class="api-image-container" onclick="toggleApiImage(this)">
-                    <img class="api-img img-front" src="images/aa_tool_experiments/impact_stop_sign_size/origin_bev.png" alt="Origin BEV">
-                    <img class="api-img img-back" src="images/aa_tool_experiments/impact_stop_sign_size/impact_bev.png" alt="Impact BEV">
-                  </div>
-                  <p class="api-caption"><strong>Origin</strong> BEV</p>
-              </div>
-      
-              <!-- Add Stop Sign -->
-              <div class="api-card card shadow-sm text-center p-3">
-                  <h6>Add Stop Sign</h6>
-                  <div class="api-image-container" onclick="toggleApiImage(this)">
-                    <!-- Layer 1: Origin BEV -->
-                    <img class="api-img img-front" src="images/aa_tool_experiments/add_stop_sign/origin_bev.png" alt="Origin BEV">
-                    <!-- Layer 2: Impact BEV with slight opacity for partial visibility -->
-                    <img class="api-img img-back" src="images/aa_tool_experiments/add_stop_sign/impact_bev.png" alt="Impact BEV">
-                  </div>
-                  <p class="api-caption"><strong>Origin</strong> BEV</p>
-              </div>
-          </div>
-        </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
 
-        <!-- 大卡片容器 -->
+        <!-- Other Vehicle API -->
         <hr>
-        <div class="card shadow-sm rounded p-4 mb-5 mx-auto" style="width: 100%; max-width: 1200px;">
-          <h5 class="mb-4 fw-semibold">Traffic Light API</h5>
-        
-          <!-- 使用 d-flex 横向排列子卡片 -->
-          <div class="api-section-container d-flex justify-content-around flex-wrap gap-4">
-        
-            <!-- Impact Traffic Light Distance -->
-            <div class="api-card card shadow-sm text-center p-3">
-              <h6>Impact Traffic Light Distance</h6>
-              <div class="api-image-container" onclick="toggleApiImage(this)">
-                <img class="api-img img-front" src="images/aa_tool_experiments/impact_traffic_light_distance/origin_bev.png" alt="Origin BEV">
-                <img class="api-img img-back" src="images/aa_tool_experiments/impact_traffic_light_distance/impact_bev.png" alt="Impact BEV">
-              </div>
-              <p class="api-caption"><strong>Origin</strong> BEV</p>
+        <h5 class="mb-4 fw-semibold">Other Vehicle API</h5>
+        <div class="api-section-container d-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem;">
+          <div class="api-card card shadow-sm text-center p-3">
+            <h6>Impact Other Vehicle Distance</h6>
+            <div class="api-image-container" onclick="toggleApiImage(this)">
+              <img class="api-img img-front" src="images/aa_tool_experiments/impact_other_vehicle_distance/origin_bev.png" alt="Origin BEV">
+              <img class="api-img img-back" src="images/aa_tool_experiments/impact_other_vehicle_distance/impact_bev.png" alt="Impact BEV">
             </div>
-        
-            <!-- Impact Traffic Light Size -->
-            <div class="api-card card shadow-sm text-center p-3">
-              <h6>Impact Traffic Light Size</h6>
-              <div class="api-image-container" onclick="toggleApiImage(this)">
-                <img class="api-img img-front" src="images/aa_tool_experiments/impact_traffic_light_size/origin_bev.png" alt="Origin BEV">
-                <img class="api-img img-back" src="images/aa_tool_experiments/impact_traffic_light_size/impact_bev.png" alt="Impact BEV">
-              </div>
-              <p class="api-caption"><strong>Origin</strong> BEV</p>
+            <p class="api-caption"><strong>Origin</strong> BEV</p>
+          </div>
+          <div class="api-card card shadow-sm text-center p-3">
+            <h6>Impact Other Vehicle Heading</h6>
+            <div class="api-image-container" onclick="toggleApiImage(this)">
+              <img class="api-img img-front" src="images/aa_tool_experiments/impact_other_vehicle_heading/origin_bev.png" alt="Origin BEV">
+              <img class="api-img img-back" src="images/aa_tool_experiments/impact_other_vehicle_heading/impact_bev.png" alt="Impact BEV">
             </div>
-        
-            <!-- Impact Traffic Light Status -->
-            <div class="api-card card shadow-sm text-center p-3">
-              <h6>Impact Traffic Light Status</h6>
-              <div class="api-image-container" onclick="toggleApiImage(this)">
-                <img class="api-img img-front" src="images/aa_tool_experiments/impact_traffic_light_status/origin_bev.png" alt="Origin BEV">
-                <img class="api-img img-back" src="images/aa_tool_experiments/impact_traffic_light_status/impact_bev.png" alt="Impact BEV">
-              </div>
-              <p class="api-caption"><strong>Origin</strong> BEV</p>
+            <p class="api-caption"><strong>Origin</strong> BEV</p>
+          </div>
+          <div class="api-card card shadow-sm text-center p-3">
+            <h6>Impact Other Vehicle Size</h6>
+            <div class="api-image-container" onclick="toggleApiImage(this)">
+              <img class="api-img img-front" src="images/aa_tool_experiments/impact_other_vehicle_size/origin_bev.png" alt="Origin BEV">
+              <img class="api-img img-back" src="images/aa_tool_experiments/impact_other_vehicle_size/impact_bev.png" alt="Impact BEV">
             </div>
-        
-            <!-- Add Traffic Light -->
-            <div class="api-card card shadow-sm text-center p-3">
-              <h6>Add Traffic Light</h6>
-              <div class="api-image-container" onclick="toggleApiImage(this)">
-                <img class="api-img img-front" src="images/aa_tool_experiments/add_traffic_light/origin_bev.png" alt="Origin BEV">
-                <img class="api-img img-back" src="images/aa_tool_experiments/add_traffic_light/impact_bev.png" alt="Impact BEV">
-              </div>
-              <p class="api-caption"><strong>Origin</strong> BEV</p>
+            <p class="api-caption"><strong>Origin</strong> BEV</p>
+          </div>
+          <div class="api-card card shadow-sm text-center p-3">
+            <h6>Impact Other Vehicle Speed</h6>
+            <div class="api-image-container" onclick="toggleApiImage(this)">
+              <img class="api-img img-front" src="images/aa_tool_experiments/impact_other_vehicle_speed/origin_bev.png" alt="Origin BEV">
+              <img class="api-img img-back" src="images/aa_tool_experiments/impact_other_vehicle_speed/impact_bev.png" alt="Impact BEV">
             </div>
-        
+            <p class="api-caption"><strong>Origin</strong> BEV</p>
+          </div>
+          <div class="api-card card shadow-sm text-center p-3">
+            <h6>Add Other Vehicle</h6>
+            <div class="api-image-container" onclick="toggleApiImage(this)">
+              <img class="api-img img-front" src="images/aa_tool_experiments/add_other_vehicle/origin_bev.png" alt="Origin BEV">
+              <img class="api-img img-back" src="images/aa_tool_experiments/add_other_vehicle/impact_bev.png" alt="Impact BEV">
+            </div>
+            <p class="api-caption"><strong>Origin</strong> BEV</p>
           </div>
         </div>
 
-        <!-- 大卡片容器 -->
+        <!-- Stop Sign API -->
         <hr>
-        <div class="card shadow-sm rounded p-4 mb-5 mx-auto" style="width: 100%; max-width: 1200px;">
-          <h5 class="mb-4 fw-semibold">Road API</h5>
-        
-          <!-- 使用 d-flex 横向排列子卡片 -->
-          <div class="api-section-container d-flex justify-content-around flex-wrap gap-4">
-        
-            <!-- Impact Road Heading -->
-            <div class="api-card card shadow-sm text-center p-3">
-              <h6>Impact Road Heading</h6>
-              <div class="api-image-container" onclick="toggleApiImage(this)">
-                <img class="api-img img-front" src="images/aa_tool_experiments/impact_road_heading/origin_bev.png" alt="Origin BEV">
-                <img class="api-img img-back" src="images/aa_tool_experiments/impact_road_heading/impact_bev.png" alt="Impact BEV">
-              </div>
-              <p class="api-caption"><strong>Origin</strong> BEV</p>
+        <h5 class="mb-4 fw-semibold">Stop Sign API</h5>
+        <div class="api-section-container d-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem;">
+          <div class="api-card card shadow-sm text-center p-3">
+            <h6>Impact Stop Sign Distance</h6>
+            <div class="api-image-container" onclick="toggleApiImage(this)">
+              <img class="api-img img-front" src="images/aa_tool_experiments/impact_stop_sign_distance/origin_bev.png" alt="Origin BEV">
+              <img class="api-img img-back" src="images/aa_tool_experiments/impact_stop_sign_distance/impact_bev.png" alt="Impact BEV">
             </div>
-        
-            <!-- Impact Road Lane Width -->
-            <div class="api-card card shadow-sm text-center p-3">
-              <h6>Impact Road Lane Width</h6>
-              <div class="api-image-container" onclick="toggleApiImage(this)">
-                <img class="api-img img-front" src="images/aa_tool_experiments/impact_road_lane_width/origin_bev.png" alt="Origin BEV">
-                <img class="api-img img-back" src="images/aa_tool_experiments/impact_road_lane_width/impact_bev.png" alt="Impact BEV">
-              </div>
-              <p class="api-caption"><strong>Origin</strong> BEV</p>
+            <p class="api-caption"><strong>Origin</strong> BEV</p>
+          </div>
+          <div class="api-card card shadow-sm text-center p-3">
+            <h6>Impact Stop Sign Size</h6>
+            <div class="api-image-container" onclick="toggleApiImage(this)">
+              <img class="api-img img-front" src="images/aa_tool_experiments/impact_stop_sign_size/origin_bev.png" alt="Origin BEV">
+              <img class="api-img img-back" src="images/aa_tool_experiments/impact_stop_sign_size/impact_bev.png" alt="Impact BEV">
             </div>
-        
-            <!-- Impact Road Shape to Curve -->
-            <div class="api-card card shadow-sm text-center p-3">
-              <h6>Impact Road Shape to Curve</h6>
-              <div class="api-image-container" onclick="toggleApiImage(this)">
-                <img class="api-img img-front" src="images/aa_tool_experiments/impact_road_shape_to_curve/origin_bev.png" alt="Origin BEV">
-                <img class="api-img img-back" src="images/aa_tool_experiments/impact_road_shape_to_curve/impact_bev.png" alt="Impact BEV">
-              </div>
-              <p class="api-caption"><strong>Origin</strong> BEV</p>
+            <p class="api-caption"><strong>Origin</strong> BEV</p>
+          </div>
+          <div class="api-card card shadow-sm text-center p-3">
+            <h6>Add Stop Sign</h6>
+            <div class="api-image-container" onclick="toggleApiImage(this)">
+              <img class="api-img img-front" src="images/aa_tool_experiments/add_stop_sign/origin_bev.png" alt="Origin BEV">
+              <img class="api-img img-back" src="images/aa_tool_experiments/add_stop_sign/impact_bev.png" alt="Impact BEV">
             </div>
-        
+            <p class="api-caption"><strong>Origin</strong> BEV</p>
           </div>
         </div>
 
-        <!-- 大卡片容器 -->
+        <!-- Traffic Light API -->
         <hr>
-        <div class="card shadow-sm rounded p-4 mb-5 mx-auto" style="width: 100%; max-width: 1200px;">
-          <h5 class="mb-4 fw-semibold">Lane API</h5>
-        
-          <!-- 使用 d-flex 横向排列子卡片 -->
-          <div class="api-section-container d-flex justify-content-around flex-wrap gap-4">
-        
-            <!-- Remove Lanes -->
-            <div class="api-card card shadow-sm text-center p-3">
-              <h6>Remove Lanes</h6>
-              <div class="api-image-container" onclick="toggleApiImage(this)">
-                <img class="api-img img-front" src="images/aa_tool_experiments/remove_lanes/origin_bev.png" alt="Origin BEV">
-                <img class="api-img img-back" src="images/aa_tool_experiments/remove_lanes/impact_bev.png" alt="Impact BEV">
-              </div>
-              <p class="api-caption"><strong>Origin</strong> BEV</p>
+        <h5 class="mb-4 fw-semibold">Traffic Light API</h5>
+        <div class="api-section-container d-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem;">
+          <div class="api-card card shadow-sm text-center p-3">
+            <h6>Impact Traffic Light Distance</h6>
+            <div class="api-image-container" onclick="toggleApiImage(this)">
+              <img class="api-img img-front" src="images/aa_tool_experiments/impact_traffic_light_distance/origin_bev.png" alt="Origin BEV">
+              <img class="api-img img-back" src="images/aa_tool_experiments/impact_traffic_light_distance/impact_bev.png" alt="Impact BEV">
             </div>
-        
+            <p class="api-caption"><strong>Origin</strong> BEV</p>
+          </div>
+          <div class="api-card card shadow-sm text-center p-3">
+            <h6>Impact Traffic Light Size</h6>
+            <div class="api-image-container" onclick="toggleApiImage(this)">
+              <img class="api-img img-front" src="images/aa_tool_experiments/impact_traffic_light_size/origin_bev.png" alt="Origin BEV">
+              <img class="api-img img-back" src="images/aa_tool_experiments/impact_traffic_light_size/impact_bev.png" alt="Impact BEV">
+            </div>
+            <p class="api-caption"><strong>Origin</strong> BEV</p>
+          </div>
+          <div class="api-card card shadow-sm text-center p-3">
+            <h6>Impact Traffic Light Status</h6>
+            <div class="api-image-container" onclick="toggleApiImage(this)">
+              <img class="api-img img-front" src="images/aa_tool_experiments/impact_traffic_light_status/origin_bev.png" alt="Origin BEV">
+              <img class="api-img img-back" src="images/aa_tool_experiments/impact_traffic_light_status/impact_bev.png" alt="Impact BEV">
+            </div>
+            <p class="api-caption"><strong>Origin</strong> BEV</p>
+          </div>
+          <div class="api-card card shadow-sm text-center p-3">
+            <h6>Add Traffic Light</h6>
+            <div class="api-image-container" onclick="toggleApiImage(this)">
+              <img class="api-img img-front" src="images/aa_tool_experiments/add_traffic_light/origin_bev.png" alt="Origin BEV">
+              <img class="api-img img-back" src="images/aa_tool_experiments/add_traffic_light/impact_bev.png" alt="Impact BEV">
+            </div>
+            <p class="api-caption"><strong>Origin</strong> BEV</p>
           </div>
         </div>
 
-    
+        <!-- Road API -->
+        <hr>
+        <h5 class="mb-4 fw-semibold">Road API</h5>
+        <div class="api-section-container d-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem;">
+          <div class="api-card card shadow-sm text-center p-3">
+            <h6>Impact Road Heading</h6>
+            <div class="api-image-container" onclick="toggleApiImage(this)">
+              <img class="api-img img-front" src="images/aa_tool_experiments/impact_road_heading/origin_bev.png" alt="Origin BEV">
+              <img class="api-img img-back" src="images/aa_tool_experiments/impact_road_heading/impact_bev.png" alt="Impact BEV">
+            </div>
+            <p class="api-caption"><strong>Origin</strong> BEV</p>
+          </div>
+          <div class="api-card card shadow-sm text-center p-3">
+            <h6>Impact Road Lane Width</h6>
+            <div class="api-image-container" onclick="toggleApiImage(this)">
+              <img class="api-img img-front" src="images/aa_tool_experiments/impact_road_lane_width/origin_bev.png" alt="Origin BEV">
+              <img class="api-img img-back" src="images/aa_tool_experiments/impact_road_lane_width/impact_bev.png" alt="Impact BEV">
+            </div>
+            <p class="api-caption"><strong>Origin</strong> BEV</p>
+          </div>
+          <div class="api-card card shadow-sm text-center p-3">
+            <h6>Impact Road Shape to Curve</h6>
+            <div class="api-image-container" onclick="toggleApiImage(this)">
+              <img class="api-img img-front" src="images/aa_tool_experiments/impact_road_shape_to_curve/origin_bev.png" alt="Origin BEV">
+              <img class="api-img img-back" src="images/aa_tool_experiments/impact_road_shape_to_curve/impact_bev.png" alt="Impact BEV">
+            </div>
+            <p class="api-caption"><strong>Origin</strong> BEV</p>
+          </div>
+        </div>
+
+        <!-- Lane API -->
+        <hr>
+        <h5 class="mb-4 fw-semibold">Lane API</h5>
+        <div class="api-section-container d-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem;">
+          <div class="api-card card shadow-sm text-center p-3">
+            <h6>Remove Lanes</h6>
+            <div class="api-image-container" onclick="toggleApiImage(this)">
+              <img class="api-img img-front" src="images/aa_tool_experiments/remove_lanes/origin_bev.png" alt="Origin BEV">
+              <img class="api-img img-back" src="images/aa_tool_experiments/remove_lanes/impact_bev.png" alt="Impact BEV">
+            </div>
+            <p class="api-caption"><strong>Origin</strong> BEV</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
-  
 </section>
 
-  
   <footer class="mt-5">
     <p>© 2025 X-DriverSim Project | Paper: Coming Soon | GitHub Repo</p>
   </footer>
