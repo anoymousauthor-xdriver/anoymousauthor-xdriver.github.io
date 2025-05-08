@@ -213,6 +213,14 @@
       border-radius: 4px;
     }
 
+    .accident-card-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-align: center;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+
 
 
     .api-image-container {
@@ -229,8 +237,10 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 70%; /* 控制图片的宽度，这里设置为 90% */
-      height: 70%; /* 控制图片的高度，这里设置为 90% */
+      transform: translate(-50%, -50%); /* ✅ 真正居中 */
+      width: 80%; /* 控制图片的宽度，这里设置为 90% */
+      height: 80%; /* 控制图片的高度，这里设置为 90% */
+      object-fit: contain;
       border-radius: 8px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, opacity 0.3s ease;
@@ -241,7 +251,7 @@
       z-index: 2; /* Ensure it is on top */
       opacity: 1;
       top: 5px;  /* Slight shift down */
-      left: 5px; /* Slight shift right */
+      left: 8px; /* Slight shift right */
     }
     
     /* Layer 2 (Impact BEV) with slight opacity */
@@ -250,7 +260,7 @@
       opacity: 0.2;
       /* Slight shift down and to the right for the second layer */
       top: -5px;  /* Move up slightly */
-      left: -5px; /* Move left slightly */
+      left: -8px; /* Move left slightly */
     }
     
     .api-image-container:hover .img-front {
@@ -270,11 +280,20 @@
 
     .api-card .card-title {
 /*       font-family: "Segoe UI", sans-serif; /* 自定义字体族 */ */
-      font-size: 0.9rem;                  /* 字体大小（可选） */
+      font-size: 0.8rem;                  /* 字体大小（可选） */
 /*       font-weight: 400;                    /* 字重（可选） */ */
       color: #333;                         /* 字体颜色（可选） */
       margin-bottom: 0.5rem;
     }
+
+    .api-card-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-align: center;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+
 
 
     
@@ -476,7 +495,7 @@
     <!-- Case 1 -->
     <div class="accident-card card shadow-sm border-light rounded">
       <div class="card-body">
-        <h5 class="card-title">Case 1: Aggressive Driving-Induced Collision</h5>
+        <div class="accident-card-title">Case 1: Aggressive Driving-Induced Collision</h5>
         <img src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/CaseStudy_agg.png" alt="Aggressive Driving-Induced Collision" class="img-fluid mb-3 accident-img">
         <p><strong>Description:</strong> Vehicle suddenly changed lanes causing a collision.<br>
           <strong>Prompt:</strong> "Change lanes aggressively ignoring traffic."</p>
@@ -486,7 +505,7 @@
     <!-- Case 2 -->
     <div class="accident-card card shadow-sm border-light rounded">
       <div class="card-body">
-        <h5 class="card-title">Case 2: Fatigue-Induced Rear-End Collision</h5>
+        <div class="accident-card-title">Case 2: Fatigue-Induced Rear-End Collision</h5>
         <img src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/CaseStudy_fai.png" alt="Fatigue-Induced Rear-End Collision" class="img-fluid mb-3 accident-img">
         <p><strong>Description:</strong> Driver failed to brake in time.<br>
           <strong>Prompt:</strong> "Drive while tired and unresponsive."</p>
@@ -496,7 +515,7 @@
     <!-- Case 3 -->
     <div class="accident-card card shadow-sm border-light rounded">
       <div class="card-body">
-        <h5 class="card-title">Case 3: Distracted Driving-Induced Side Collision</h5>
+        <div class="accident-card-title">Case 3: Distracted Driving-Induced Side Collision</h5>
         <img src="https://github.com/anoymousauthor-xdriver/anoymousauthor-xdriver.github.io/releases/download/v1.0/CaseStudy_dis.png" alt="Distracted Driving-Induced Side Collision" class="img-fluid mb-3 accident-img">
         <p><strong>Description:</strong> Driver veered into another lane.<br>
           <strong>Prompt:</strong> "Check phone while driving."</p>
@@ -734,7 +753,7 @@
     <div class="col">
       <div class="api-card card shadow-sm rounded border-light">
         <div class="card-body text-center">
-          <h5 class="card-title">Impact Other Vehicle Distance</h5>
+          <div class="api-card-title">Impact Other Vehicle Distance</h5>
     
           <div class="api-image-container" onclick="toggleApiImage(this)">
             <img class="api-img img-front" src="images/aa_tool_experiments/impact_other_vehicle_distance/origin_bev.png" alt="Origin BEV">
@@ -750,7 +769,7 @@
     <div class="col">
       <div class="api-card card shadow-sm rounded border-light">
         <div class="card-body text-center">
-          <h5 class="card-title">Impact Other Vehicle Heading</h5>
+          <div class="api-card-title">Impact Other Vehicle Heading</h5>
     
           <div class="api-image-container" onclick="toggleApiImage(this)">
             <img class="api-img img-front" src="images/aa_tool_experiments/impact_other_vehicle_heading/origin_bev.png" alt="Origin BEV">
@@ -766,7 +785,7 @@
     <div class="col">
       <div class="api-card card shadow-sm rounded border-light">
         <div class="card-body text-center">
-          <h5 class="card-title">Impact Other Vehicle Size</h5>
+          <div class="api-card-title">Impact Other Vehicle Size</h5>
     
           <div class="api-image-container" onclick="toggleApiImage(this)">
             <img class="api-img img-front" src="images/aa_tool_experiments/impact_other_vehicle_size/origin_bev.png" alt="Origin BEV">
@@ -782,7 +801,7 @@
     <div class="col">
       <div class="api-card card shadow-sm rounded border-light">
         <div class="card-body text-center">
-          <h5 class="card-title">Impact Other Vehicle Speed</h5>
+          <div class="api-card-title">Impact Other Vehicle Speed</h5>
     
           <div class="api-image-container" onclick="toggleApiImage(this)">
             <img class="api-img img-front" src="images/aa_tool_experiments/impact_other_vehicle_speed/origin_bev.png" alt="Origin BEV">
@@ -798,7 +817,7 @@
     <div class="col">
       <div class="api-card card shadow-sm rounded border-light">
         <div class="card-body text-center">
-          <h5 class="card-title">Add Other Vehicle</h5>
+          <div class="api-card-title">Add Other Vehicle</h5>
     
           <div class="api-image-container" onclick="toggleApiImage(this)">
             <!-- Layer 1: Origin BEV -->
@@ -818,7 +837,7 @@
     <div class="col">
       <div class="api-card card shadow-sm rounded border-light">
         <div class="card-body text-center">
-          <h5 class="card-title">Impact Stop Sign Distance</h5>
+          <div class="api-card-title">Impact Stop Sign Distance</h5>
     
           <div class="api-image-container" onclick="toggleApiImage(this)">
             <img class="api-img img-front" src="images/aa_tool_experiments/impact_stop_sign_distance/origin_bev.png" alt="Origin BEV">
@@ -834,7 +853,7 @@
     <div class="col">
       <div class="api-card card shadow-sm rounded border-light">
         <div class="card-body text-center">
-          <h5 class="card-title">Impact Stop Sign Size</h5>
+          <div class="api-card-title">Impact Stop Sign Size</h5>
     
           <div class="api-image-container" onclick="toggleApiImage(this)">
             <img class="api-img img-front" src="images/aa_tool_experiments/impact_stop_sign_size/origin_bev.png" alt="Origin BEV">
@@ -850,7 +869,7 @@
     <div class="col">
       <div class="api-card card shadow-sm rounded border-light">
         <div class="card-body text-center">
-          <h5 class="card-title">Add Stop Sign</h5>
+          <div class="api-card-title">Add Stop Sign</h5>
     
           <div class="api-image-container" onclick="toggleApiImage(this)">
             <!-- Layer 1: Origin BEV -->
@@ -870,7 +889,7 @@
     <div class="col">
       <div class="api-card card shadow-sm rounded border-light">
         <div class="card-body text-center">
-          <h5 class="card-title">Impact Traffic Light Distance</h5>
+          <div class="api-card-title">Impact Traffic Light Distance</h5>
           <div class="api-image-container" onclick="toggleApiImage(this)">
             <img class="api-img img-front" src="images/aa_tool_experiments/impact_traffic_light_distance/origin_bev.png" alt="Origin BEV">
             <img class="api-img img-back" src="images/aa_tool_experiments/impact_traffic_light_distance/impact_bev.png" alt="Impact BEV">
@@ -884,7 +903,7 @@
     <div class="col">
       <div class="api-card card shadow-sm rounded border-light">
         <div class="card-body text-center">
-          <h5 class="card-title">Impact Traffic Light Size</h5>
+          <div class="api-card-title">Impact Traffic Light Size</h5>
           <div class="api-image-container" onclick="toggleApiImage(this)">
             <img class="api-img img-front" src="images/aa_tool_experiments/impact_traffic_light_size/origin_bev.png" alt="Origin BEV">
             <img class="api-img img-back" src="images/aa_tool_experiments/impact_traffic_light_size/impact_bev.png" alt="Impact BEV">
@@ -898,7 +917,7 @@
     <div class="col">
       <div class="api-card card shadow-sm rounded border-light">
         <div class="card-body text-center">
-          <h5 class="card-title">Impact Traffic Light Status</h5>
+          <div class="api-card-title">Impact Traffic Light Status</h5>
           <div class="api-image-container" onclick="toggleApiImage(this)">
             <img class="api-img img-front" src="images/aa_tool_experiments/impact_traffic_light_status/origin_bev.png" alt="Origin BEV">
             <img class="api-img img-back" src="images/aa_tool_experiments/impact_traffic_light_status/impact_bev.png" alt="Impact BEV">
@@ -912,7 +931,7 @@
     <div class="col">
       <div class="api-card card shadow-sm rounded border-light">
         <div class="card-body text-center">
-          <h5 class="card-title">Add Traffic Light</h5>
+          <div class="api-card-title">Add Traffic Light</h5>
           <div class="api-image-container" onclick="toggleApiImage(this)">
             <img class="api-img img-front" src="images/aa_tool_experiments/add_traffic_light/origin_bev.png" alt="Origin BEV">
             <img class="api-img img-back" src="images/aa_tool_experiments/add_traffic_light/impact_bev.png" alt="Impact BEV">
@@ -927,7 +946,7 @@
     <div class="col">
       <div class="api-card card shadow-sm rounded border-light">
         <div class="card-body text-center">
-          <h5 class="card-title">Impact Road Heading</h5>
+          <div class="api-card-title">Impact Road Heading</h5>
           <div class="api-image-container" onclick="toggleApiImage(this)">
             <img class="api-img img-front" src="images/aa_tool_experiments/impact_road_heading/origin_bev.png" alt="Origin BEV">
             <img class="api-img img-back" src="images/aa_tool_experiments/impact_road_heading/impact_bev.png" alt="Impact BEV">
@@ -941,7 +960,7 @@
     <div class="col">
       <div class="api-card card shadow-sm rounded border-light">
         <div class="card-body text-center">
-          <h5 class="card-title">Impact Road Lane Width</h5>
+          <div class="api-card-title">Impact Road Lane Width</h5>
           <div class="api-image-container" onclick="toggleApiImage(this)">
             <img class="api-img img-front" src="images/aa_tool_experiments/impact_road_lane_width/origin_bev.png" alt="Origin BEV">
             <img class="api-img img-back" src="images/aa_tool_experiments/impact_road_lane_width/impact_bev.png" alt="Impact BEV">
@@ -955,7 +974,7 @@
     <div class="col">
       <div class="api-card card shadow-sm rounded border-light">
         <div class="card-body text-center">
-          <h5 class="card-title">Impact Road Shape to Curve</h5>
+          <div class="api-card-title">Impact Road Shape to Curve</h5>
           <div class="api-image-container" onclick="toggleApiImage(this)">
             <img class="api-img img-front" src="images/aa_tool_experiments/impact_road_shape_to_curve/origin_bev.png" alt="Origin BEV">
             <img class="api-img img-back" src="images/aa_tool_experiments/impact_road_shape_to_curve/impact_bev.png" alt="Impact BEV">
@@ -970,7 +989,7 @@
     <div class="col">
       <div class="api-card card shadow-sm rounded border-light">
         <div class="card-body text-center">
-          <h5 class="card-title">Remove Lanes</h5>
+          <div class="api-card-title">Remove Lanes</h5>
           <div class="api-image-container" onclick="toggleApiImage(this)">
             <img class="api-img img-front" src="images/aa_tool_experiments/remove_lanes/origin_bev.png" alt="Origin BEV">
             <img class="api-img img-back" src="images/aa_tool_experiments/remove_lanes/impact_bev.png" alt="Impact BEV">
